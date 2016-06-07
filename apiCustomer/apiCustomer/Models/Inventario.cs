@@ -5,7 +5,7 @@ using System.Web;
 
 namespace apiCustomer.Models
 {
-    public class CustomerModel
+    public class Inventario
     {
         public int NoEntrada { get; set; }
         public string Codigo { get; set; }
