@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="Diseño_Interfaz_Proyecto_Integrador.Controles.AdministracionControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Diseño_Interfaz_Proyecto_Integrador.Controles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="400" Height="465">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:ConnectionId='1' x:Name="cboTipo" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="0,0,0,5"/>
+        <TextBox x:ConnectionId='2' x:Name="txtNombre1" PlaceholderText="Nombre Completo" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Margin="0,1,0,5"/>
+        <TextBox x:ConnectionId='3' x:Name="txtMaterno" PlaceholderText="Apellido Materno" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="6" Margin="10,1,0,0"/>
+        <TextBox x:ConnectionId='4' x:Name="txtPaterno" PlaceholderText="Apellido Paterno" Margin="0,1,10,0" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="6"/>
+        <TextBox x:ConnectionId='5' x:Name="txtContraseña" PlaceholderText="Contraseña" Margin="0,3" Text="" Grid.ColumnSpan="2" Grid.Row="8" Grid.Column="1"/>
+        <TextBox x:ConnectionId='6' x:Name="txtConfirmar" PlaceholderText="Confirmar Contraseña" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10" Height="39" VerticalAlignment="Bottom"/>
+        <TextBox x:ConnectionId='7' x:Name="txtPregunta" PlaceholderText="Pregunta de Seguridad" Margin="0,4,0,2" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="12"/>
+        <TextBox x:ConnectionId='8' x:Name="txtRespuesta" PlaceholderText="Respuesta de Seguridad" Margin="0,1,0,5" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14"/>
+
+    </Grid>
+</UserControl>
+

@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="Diseño_Interfaz_Proyecto_Integrador.Consultas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Diseño_Interfaz_Proyecto_Integrador"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ToolKit="using:MyToolkit.Controls"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="btnAltas" Icon="Add" Label="Altas" Click="btnAltas_Click"/>
+            <AppBarButton x:Name="btnBajas" Icon="Delete" Label="Bajas" Click="btnBajas_Click"/>
+            <AppBarButton x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479" Click="btnConsultas_Click"/>
+            <AppBarButton x:Name="btnModificaciones" Icon="Edit" Label="Modificar" Click="btnModificaciones_Click"/>
+            <AppBarButton x:Name="btnAdministracion" Icon="People" Label="Admin" Click="btnAdministracion_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" Margin="10,0,102,10" TextWrapping="Wrap" FontSize="32" Text="Consultas" Grid.ColumnSpan="4"/>
+        <TextBox TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar"/>
+        <ComboBox x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por"/>
+        <ToolKit:DataGrid x:Name="dgPersona" Margin="10,10,10,15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <ToolKit:DataGrid.Columns>
+                <ToolKit:DataGridTemplatedColumn Header="No" Width="50">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding NoEntrada}" Width="50" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Codigo" Width="100">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Codigo}" Width="100" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Estilo" Width="150">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Estilo}" Width="150" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Cant" Width="50">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Cantidad}" Width="50" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Categoria" Width="100">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Categoria}" Width="100" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+            </ToolKit:DataGrid.Columns>
+        </ToolKit:DataGrid>
+    </Grid>
+</Page>
+<!--
+
+    <ToolKit:DataGrid x:Name="dgPersona" Margin="10,10,10,15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <ToolKit:DataGrid.Columns>
+                <ToolKit:DataGridTextColumn Header="NoEntrada" Binding="{Binding NoEntrada}"/>
+                <ToolKit:DataGridTextColumn Header="Codigo" Binding="{Binding apellido}"/>
+                <ToolKit:DataGridTextColumn Header="Observaciones" Binding="{Binding Observaciones}"/>
+                <ToolKit:DataGridTextColumn Header="fechaEntrada" Binding="{Binding FechaEntrada}"/>
+                <ToolKit:DataGridTextColumn Header="fechaSalida" Binding="{Binding FechaSalida}"/>
+                <ToolKit:DataGridTextColumn Header="Cantidad" Binding="{Binding cantidad}"/>
+                <ToolKit:DataGridTextColumn Header="Categoria" Binding="{Binding categoria}"/>
+                <ToolKit:DataGridTemplatedColumn  Header ="Disponible">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding estatus}"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+            </ToolKit:DataGrid.Columns>
+        </ToolKit:DataGrid>
+    
+    -->
