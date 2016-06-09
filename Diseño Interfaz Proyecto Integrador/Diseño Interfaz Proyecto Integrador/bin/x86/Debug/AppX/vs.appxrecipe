@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-07T17:53:40.346</Modified>
+      <Modified>2016-06-08T01:47:35.596</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>entrypoint\Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-07T17:53:38.990</Modified>
+      <Modified>2016-06-08T01:47:34.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -534,11 +534,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-07T17:53:39.996</Modified>
+      <Modified>2016-06-08T01:47:35.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-07T17:53:40.339</Modified>
+      <Modified>2016-06-08T01:47:35.593</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

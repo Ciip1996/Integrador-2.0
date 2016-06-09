@@ -32,7 +32,7 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Altas" FontSize="32" Margin="0,10,0,0" Height="75" VerticalAlignment="Top" Grid.Column="1"/>
         <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <local:AltasControl Loaded="AltasControl_Loaded" Height="255" VerticalAlignment="Top"/>
+            <local:AltasControl x:Name="controlAltas" Loaded="AltasControl_Loaded" Height="255" VerticalAlignment="Top"/>
         </ScrollViewer>
         <Button x:Name="btnSubir" Margin="0,0,10,6" HorizontalAlignment="Right" Click="btnSubir_Click" Content="Dar de Alta" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="2" Grid.Column="1"/>
     </Grid>

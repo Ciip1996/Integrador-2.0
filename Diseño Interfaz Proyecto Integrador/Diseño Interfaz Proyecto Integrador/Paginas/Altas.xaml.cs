@@ -53,7 +53,7 @@ namespace Diseño_Interfaz_Proyecto_Integrador
 
         private void btnSubir_Click(object sender, RoutedEventArgs e)
         {
-            
+            TextBox caja1 = (TextBox)controlAltas.["txtCodigo"];
         }
         private void AltasControl_Loaded(object sender, RoutedEventArgs e)
         {
