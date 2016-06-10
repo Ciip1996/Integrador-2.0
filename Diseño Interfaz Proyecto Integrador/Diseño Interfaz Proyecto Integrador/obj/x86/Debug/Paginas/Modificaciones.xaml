@@ -20,10 +20,11 @@
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="90*"/>
-            <RowDefinition Height="12*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="506*"/>
+            <RowDefinition Height="67*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
@@ -31,9 +32,10 @@
             <ColumnDefinition Width="215*"/>
             <ColumnDefinition Width="64*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:ConnectionId='6' x:Name="txtMod" Margin="10,9.2,9,0" TextWrapping="Wrap" PlaceholderText="Codigo de producto" Grid.Column="1" Grid.Row="1" Height="36" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='7' x:Name="btnOk" Content="Acceder" Grid.Column="2" HorizontalAlignment="Stretch" Margin="5,9.2,10,0" VerticalAlignment="Top" Grid.Row="1" Height="36"/>
-        <Grid x:ConnectionId='8' x:Name="listBox1" Margin="10,0.4,0,10" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2">
+        <TextBlock x:ConnectionId='6' x:Name="textBlock" Margin="10,0,22,0" TextWrapping="Wrap" FontSize="42" Text="Modificaciones" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="70" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='7' x:Name="txtMod" Margin="10,20,9,0" TextWrapping="Wrap" PlaceholderText="Codigo de producto" Grid.Column="1" Grid.Row="2" Height="36" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='8' x:Name="btnOk" Content="Acceder" Grid.Column="2" HorizontalAlignment="Stretch" Margin="5,20,10,0" VerticalAlignment="Top" Grid.Row="2" Height="36"/>
+        <Grid x:ConnectionId='9' x:Name="listBox1" Margin="0,0,10,10" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
 
         </Grid>
         <!--

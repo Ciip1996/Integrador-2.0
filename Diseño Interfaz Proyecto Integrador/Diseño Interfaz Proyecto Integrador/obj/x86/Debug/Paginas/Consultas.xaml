@@ -21,8 +21,8 @@
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="16*"/>
             <RowDefinition Height="99*"/>
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
@@ -33,9 +33,9 @@
             <ColumnDefinition Width="86*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:ConnectionId='6' x:Name="textBlock" Margin="10,0,102,10" TextWrapping="Wrap" FontSize="32" Text="Consultas" Grid.ColumnSpan="4"/>
-        <TextBox TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar"/>
-        <ComboBox x:ConnectionId='7' x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por"/>
+        <TextBlock x:ConnectionId='6' x:Name="textBlock" Margin="10,0,102,0" TextWrapping="Wrap" FontSize="42" Text="Consultas" Grid.ColumnSpan="4" Height="65" VerticalAlignment="Top"/>
+        <TextBox TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar" Margin="0,12,0,0"/>
+        <ComboBox x:ConnectionId='7' x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por" Margin="0,12,0,0"/>
         <ToolKit:DataGrid x:ConnectionId='8' x:Name="dgPersona" Margin="10,10,10,15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
             <ToolKit:DataGrid.Columns>
                 <ToolKit:DataGridTemplatedColumn Header="No" Width="50">

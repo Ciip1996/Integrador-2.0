@@ -256,7 +256,6 @@ C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\D
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Controles\AdministracionControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Controles\BajasControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Paginas\Altas.xbf
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\AltasControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Mod.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Paginas\Administracion.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Paginas\Modificaciones.xbf
@@ -392,8 +391,6 @@ C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\D
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\BajasControl.g.cs
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Altas.g.i.cs
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Altas.g.cs
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\AltasControl.g.i.cs
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\AltasControl.g.cs
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Mod.g.i.cs
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Mod.g.cs
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Administracion.g.i.cs
@@ -411,7 +408,6 @@ C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\D
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AdministracionControl.xaml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\BajasControl.xaml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Altas.xaml
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\AltasControl.xaml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Mod.xaml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Administracion.xaml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Modificaciones.xaml
@@ -422,7 +418,6 @@ C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\D
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AdministracionControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\BajasControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Altas.xbf
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\AltasControl.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Mod.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Administracion.xbf
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Paginas\Modificaciones.xbf
@@ -504,3 +499,12 @@ C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\D
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\MyToolkit.Extended.pri.xml
 C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AltasControl.g.i.cs
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AltasControl.g.cs
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AltasControl.xaml
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\Controles\AltasControl.xbf
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Controles\AltasControl.xbf
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\ConexionUWP.dll
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\ConexionUWP.pdb
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\ConexionUWP.pri
+C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\ConexionUWP.pri.xml

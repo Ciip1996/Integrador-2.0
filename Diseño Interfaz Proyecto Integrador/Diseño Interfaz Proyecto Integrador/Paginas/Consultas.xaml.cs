@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConexionUWP;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
     public sealed partial class Consultas : Page
@@ -23,17 +25,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         {
             this.InitializeComponent();
             Task tarea = RunAsync();
+         
         }
-        public async Task RunAsync()//Metodo 
-        {
-            string url = "http://localhost:59511/Api/Customer";
-            var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(url);// Aqui se define si es GET, GET(n), PUT, POST y DELETE.
-            response.EnsureSuccessStatusCode(); //si la respuesta tiene un 200 fue exitoso. sino no
-            //Descargar MyToolkit.Extended por Rico Suter
-            List<Persona> content = await response.Content.ReadAsAsync<List<Persona>>();//para correr esta linea bajar una extension del nuget: Microsoft.AspNet.webapi.client
-            dgPersona.ItemsSource = content; //Descomentar cuando este listo el xaml con el toolkit:datadrid
-            dgPersona.Items.Refresh();  //Descomentar cuando este listo el xaml con el toolkit:datadrid
+         public async Task RunAsync()//Metodo 
+         {
+            DSL_UWP cnn = new DSL_UWP();
+            await cnn.solicitarInventario("http://localhost:51550/Api/Inventario");
+            dgPersona.ItemsSource = cnn.obtenerInventario();
+            dgPersona.Items.Refresh();
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {

@@ -30,8 +30,8 @@
             <RowDefinition Height="19*"/>
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Bajas" FontSize="32" Margin="0,10,0,0" Height="75" VerticalAlignment="Top" Grid.Column="1"/>
-       
+        <TextBlock Text="Bajas" FontSize="42" Margin="0,0,10,0" Height="75" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
         <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" >
             <my:BajasControl x:Name="ctrlBajas"  Height="255" VerticalAlignment="Top" Loaded="BajasControl_Loaded" />
         </ScrollViewer>

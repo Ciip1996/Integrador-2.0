@@ -117,7 +117,6 @@
     <RootType FullName="Diseño_Interfaz_Proyecto_Integrador.AltasControl">
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Diseño_Interfaz_Proyecto_Integrador.Altas" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">

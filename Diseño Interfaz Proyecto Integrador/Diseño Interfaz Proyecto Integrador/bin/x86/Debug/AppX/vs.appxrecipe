@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-08T01:47:35.596</Modified>
+      <Modified>2016-06-10T01:36:05.753</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>entrypoint\Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-08T01:47:34.733</Modified>
+      <Modified>2016-06-10T01:36:04.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -478,6 +478,10 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-02-17T02:22:27.825</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\ConexionUWP\ConexionUWP\bin\Debug\ConexionUWP.dll">
+      <PackagePath>ConexionUWP.dll</PackagePath>
+      <Modified>2016-06-10T01:35:52.573</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-05-27T22:10:27.939</Modified>
@@ -522,7 +526,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Diseño Interfaz Proyecto Integrador.xr.xml">
       <PackagePath>Diseño Interfaz Proyecto Integrador.xr.xml</PackagePath>
-      <Modified>2016-06-07T04:32:02.029</Modified>
+      <Modified>2016-06-09T22:37:43.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -534,11 +538,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-08T01:47:35.300</Modified>
+      <Modified>2016-06-10T01:34:13.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-08T01:47:35.593</Modified>
+      <Modified>2016-06-10T01:36:05.698</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConexionUWP;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,11 +54,10 @@ namespace Diseño_Interfaz_Proyecto_Integrador
 
         private void btnSubir_Click(object sender, RoutedEventArgs e)
         {
-            TextBox caja1 = (TextBox)controlAltas.["txtCodigo"];
-        }
-        private void AltasControl_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            TextBox txt = (TextBox)controlAltas.FindName("txtCodigo");
+            DSL_UWP cnn = new DSL_UWP();
+            //Task c =  cnn.Get("http://localhost:51550/Api/Inventario");
+            //HttpResponseMessage d = cnn.getResponse();
         }
     }
 }
