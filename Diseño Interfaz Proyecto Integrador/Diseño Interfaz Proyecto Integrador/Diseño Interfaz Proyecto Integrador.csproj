@@ -104,6 +104,10 @@
     <Compile Include="Controles\BajasControl.xaml.cs">
       <DependentUpon>BajasControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles\EditarEmpleadoControl.xaml.cs">
+      <DependentUpon>EditarEmpleadoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.cs" />
     <Compile Include="Mod.xaml.cs">
       <DependentUpon>Mod.xaml</DependentUpon>
     </Compile>
@@ -128,6 +132,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Parseador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +142,11 @@
     <None Include="Diseño Interfaz Proyecto Integrador_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Galeria\MPK1000_Chocolate.jpg" />
+    <Content Include="Galeria\MPK1000_Negro_Hueso.jpg" />
+    <Content Include="Galeria\MPK1000_Tabaco_Miel.jpg" />
+    <Content Include="Galeria\MPK1001_Beige_Café.jpg" />
+    <Content Include="Galeria\MPK1002_Marino.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -156,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controles\BajasControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\EditarEmpleadoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,10 +207,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ConexionUWP">
+    <Reference Include="ConexionUWP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ConexionUWP\ConexionUWP\bin\Debug\ConexionUWP.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

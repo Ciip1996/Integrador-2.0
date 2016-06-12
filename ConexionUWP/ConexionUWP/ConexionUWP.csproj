@@ -109,7 +109,6 @@
   <ItemGroup>
     <Compile Include="DAL_UWP.cs" />
     <Compile Include="DSL_UWP.cs" />
-    <Compile Include="Inventario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ConexionUWP.rd.xml" />
   </ItemGroup>

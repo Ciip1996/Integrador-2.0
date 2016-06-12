@@ -1,4 +1,4 @@
-﻿using ConexionUWP;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,23 +15,47 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Diseño_Interfaz_Proyecto_Integrador.Controles;
+using ConexionUWP;
 
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
+
     public sealed partial class Consultas : Page
     {
+        public static DSL_UWP cnn;
+        public static List<Inventario> inventario;
         public Consultas()
         {
             this.InitializeComponent();
-            Task tarea = RunAsync();
-         
         }
-         public async Task RunAsync()//Metodo 
-         {
-            DSL_UWP cnn = new DSL_UWP();
-            await cnn.solicitarInventario("http://localhost:51550/Api/Inventario");
-            dgPersona.ItemsSource = cnn.obtenerInventario();
+        public async Task consultarPorID()//Metodo 
+        {
+            cnn = new DSL_UWP();
+            string numero = txtBuscar.Text;
+            await cnn.getAllByParameter("http://localhost:51550/Api/Inventario/",numero);
+            Parseador parseador = new Parseador();
+            inventario = parseador.InventarioCast(cnn.getContent());
+            dgPersona.ItemsSource = inventario;
+            dgPersona.Items.Refresh();
+        }
+        public async Task consultarTodo()//Metodo 
+        {
+            cnn = new DSL_UWP();
+            await cnn.getAll("http://localhost:51550/Api/Inventario");
+            Parseador parseador = new Parseador();
+            inventario = parseador.InventarioCast(cnn.getContent());
+            dgPersona.ItemsSource = inventario;
+            dgPersona.Items.Refresh();
+        }
+        public async Task consultarPorCodigo()//Metodo 
+        {
+            cnn = new DSL_UWP();
+            string codigo = txtBuscar.Text;
+            await cnn.getAllByParameter("http://localhost:51550/Api/Inventario?codigo=",codigo);
+            Parseador parseador = new Parseador();
+            inventario = parseador.InventarioCast(cnn.getContent());
+            dgPersona.ItemsSource = inventario;
             dgPersona.Items.Refresh();
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
@@ -55,6 +79,21 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         {
             Frame.Navigate(typeof(Administracion));
 
+        }
+        private void btnConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            switch (cboBuscarPor.SelectedIndex) {
+                case 0:
+                    Task tsk1 = consultarTodo();
+                    break;
+                case 1:
+                    Task tsk2 = consultarPorID();
+                    break;
+                case 2:
+                    Task tsk3 = consultarPorCodigo();
+                    break;
+            }
+            
         }
     }
 }

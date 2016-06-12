@@ -8,6 +8,8 @@ using apiCustomer.Models;//se pone el using el nombre del proyecto y su modelos
 using RNConexion.ISSC211.DataAbstractionLayer;
 using RNConexion.ISSC211.DataStorageLayer;
 using System.Data;
+using Newtonsoft.Json;
+
 namespace apiCustomer.Controllers
 {
     public class InventarioController : ApiController
@@ -15,77 +17,69 @@ namespace apiCustomer.Controllers
         // GET: api/Customer
         public IEnumerable<Inventario> Get()//se pone el tipo CustomerModel o la clase que se va a enviar
         {
-            List<Inventario> listaObj = new List<Inventario>();
-            Inventario objeto = new Inventario();
             DSL conexion = new DSL();
             bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.consultaInventario", System.Data.CommandType.StoredProcedure);
-            //conexion.SetParameterProcedure("@nombre", System.Data.ParameterDirection.Input, enumTipo.Cadena, "Ivan");
             DataTable table = conexion.ReturnTable();
+            return turnTableToInventario(table);
+        }
+        public IEnumerable<Inventario> turnTableToInventario(DataTable table)
+        {
+            List<Inventario> listaObj = new List<Inventario>();
+            Inventario objeto = new Inventario();
             foreach (DataRow Obj in table.Rows)
             {
                 objeto = new Inventario();
                 objeto.NoEntrada = int.Parse(Obj[0].ToString());
                 objeto.Codigo = Obj[1].ToString();
-                objeto.Estilo = Obj[2].ToString();
-                objeto.cantidad = int.Parse(Obj[3].ToString());
-                objeto.categoria = int.Parse(Obj[4].ToString());
-                objeto.FechaEntrada = (DateTime)Obj[5];
-                try { objeto.FechaSalida = (DateTime)Obj[6]; }
+                objeto.Cantidad = int.Parse(Obj[2].ToString());
+                objeto.Categoria = int.Parse(Obj[3].ToString());
+                objeto.FechaEntrada = (DateTime)Obj[4];
+                try { objeto.FechaSalida = (DateTime)Obj[5]; }
                 catch (Exception e) { }
-                try{ objeto.Observaciones = Obj[7].ToString();}
+                try { objeto.Observaciones = Obj[6].ToString(); }
                 catch (Exception e) { }
-                try{ objeto.estatus = int.Parse(Obj[8].ToString());}
+                try { objeto.Estatus = int.Parse(Obj[7].ToString()); }
                 catch (Exception e) { }
                 listaObj.Add(objeto);
             }
             return listaObj;
         }
-
         // GET: api/Customer/5
-        public string Get(int id)
+        public IEnumerable<Inventario> Get(int id)
         {
-
-
-            return "value";
+            DSL conexion = new DSL();
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
+            conexion.InitialSQLStatment("dbo.consultaPorID", System.Data.CommandType.StoredProcedure);
+            conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
+            DataTable table = conexion.ReturnTable();
+            return turnTableToInventario(table);
+        }
+        public IEnumerable<Inventario> Get(string codigo)
+        {
+            DSL conexion = new DSL();
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
+            conexion.InitialSQLStatment("dbo.consultaPorCodigo", System.Data.CommandType.StoredProcedure);
+            conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, enumTipo.Cadena, codigo);
+            DataTable table = conexion.ReturnTable();
+            return turnTableToInventario(table);
         }
 
         // POST: api/Customer
-        public void Post([FromBody]string value)
+        public void Post(Inventario inventario)//INSERT 
         {
-
+            
         }
 
         // PUT: api/Customer/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Object inventario)//UPDATE 
         {
 
         }
         // DELETE: api/Customer/5
         public void Delete(string id)//Bajas
         {
-            /*Inventario objeto = new Inventario();
-            DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
-            conexion.InitialSQLStatment("dbo.bajaInventario", System.Data.CommandType.StoredProcedure);
-            conexion.SetParameterProcedure("@parametro", System.Data.ParameterDirection.Input, enumTipo.Cadena,id);
-            DataTable table = conexion.ReturnTable();
-            foreach (DataRow Obj in table.Rows)
-            {
-                objeto = new Inventario();
-                objeto.NoEntrada = int.Parse(Obj[0].ToString());
-                objeto.Codigo = Obj[1].ToString();
-                objeto.Estilo = Obj[2].ToString();
-                objeto.cantidad = int.Parse(Obj[3].ToString());
-                objeto.categoria = int.Parse(Obj[4].ToString());
-                objeto.FechaEntrada = (DateTime)Obj[5];
-                try { objeto.FechaSalida = (DateTime)Obj[6]; }
-                catch (Exception e) { }
-                try { objeto.Observaciones = Obj[7].ToString(); }
-                catch (Exception e) { }
-                try { objeto.estatus = int.Parse(Obj[8].ToString()); }
-                catch (Exception e) { }
-            }*/
+           
         }
     }
 }

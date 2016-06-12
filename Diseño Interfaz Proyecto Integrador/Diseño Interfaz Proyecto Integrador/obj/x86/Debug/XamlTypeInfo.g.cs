@@ -156,73 +156,75 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[32];
+            _typeNameTable = new string[33];
             _typeNameTable[0] = "Diseño_Interfaz_Proyecto_Integrador.Controles.AdministracionControl";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Diseño_Interfaz_Proyecto_Integrador.Controles.BajasControl";
-            _typeNameTable[3] = "Diseño_Interfaz_Proyecto_Integrador.AltasControl";
-            _typeNameTable[4] = "Diseño_Interfaz_Proyecto_Integrador.Altas";
-            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[6] = "Object";
-            _typeNameTable[7] = "Diseño_Interfaz_Proyecto_Integrador.Mod";
-            _typeNameTable[8] = "Diseño_Interfaz_Proyecto_Integrador.Administracion";
-            _typeNameTable[9] = "Diseño_Interfaz_Proyecto_Integrador.Modificaciones";
-            _typeNameTable[10] = "MyToolkit.Controls.DataGrid";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[12] = "MyToolkit.Controls.DataGridColumnCollection";
-            _typeNameTable[13] = "System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>";
-            _typeNameTable[14] = "System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>";
-            _typeNameTable[15] = "MyToolkit.Controls.DataGridColumnBase";
-            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[17] = "Boolean";
-            _typeNameTable[18] = "Windows.UI.Xaml.GridLength";
-            _typeNameTable[19] = "Windows.UI.Xaml.PropertyPath";
-            _typeNameTable[20] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[21] = "MyToolkit.Collections.IObservableCollectionView";
-            _typeNameTable[22] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[23] = "Windows.UI.Xaml.Controls.SelectionMode";
-            _typeNameTable[24] = "Int32";
-            _typeNameTable[25] = "Windows.UI.Xaml.Style";
-            _typeNameTable[26] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[27] = "MyToolkit.Controls.DataGridTemplatedColumn";
-            _typeNameTable[28] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[29] = "Diseño_Interfaz_Proyecto_Integrador.Consultas";
-            _typeNameTable[30] = "Diseño_Interfaz_Proyecto_Integrador.Bajas";
-            _typeNameTable[31] = "Diseño_Interfaz_Proyecto_Integrador.MainPage";
+            _typeNameTable[3] = "Diseño_Interfaz_Proyecto_Integrador.Controles.EditarEmpleadoControl";
+            _typeNameTable[4] = "Diseño_Interfaz_Proyecto_Integrador.AltasControl";
+            _typeNameTable[5] = "Diseño_Interfaz_Proyecto_Integrador.Altas";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[7] = "Object";
+            _typeNameTable[8] = "Diseño_Interfaz_Proyecto_Integrador.Mod";
+            _typeNameTable[9] = "Diseño_Interfaz_Proyecto_Integrador.Administracion";
+            _typeNameTable[10] = "Diseño_Interfaz_Proyecto_Integrador.Modificaciones";
+            _typeNameTable[11] = "MyToolkit.Controls.DataGrid";
+            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[13] = "MyToolkit.Controls.DataGridColumnCollection";
+            _typeNameTable[14] = "System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>";
+            _typeNameTable[15] = "System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>";
+            _typeNameTable[16] = "MyToolkit.Controls.DataGridColumnBase";
+            _typeNameTable[17] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[18] = "Boolean";
+            _typeNameTable[19] = "Windows.UI.Xaml.GridLength";
+            _typeNameTable[20] = "Windows.UI.Xaml.PropertyPath";
+            _typeNameTable[21] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[22] = "MyToolkit.Collections.IObservableCollectionView";
+            _typeNameTable[23] = "Windows.UI.Xaml.Media.Brush";
+            _typeNameTable[24] = "Windows.UI.Xaml.Controls.SelectionMode";
+            _typeNameTable[25] = "Int32";
+            _typeNameTable[26] = "Windows.UI.Xaml.Style";
+            _typeNameTable[27] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[28] = "MyToolkit.Controls.DataGridTemplatedColumn";
+            _typeNameTable[29] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[30] = "Diseño_Interfaz_Proyecto_Integrador.Consultas";
+            _typeNameTable[31] = "Diseño_Interfaz_Proyecto_Integrador.Bajas";
+            _typeNameTable[32] = "Diseño_Interfaz_Proyecto_Integrador.MainPage";
 
-            _typeTable = new global::System.Type[32];
+            _typeTable = new global::System.Type[33];
             _typeTable[0] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Controles.AdministracionControl);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Controles.BajasControl);
-            _typeTable[3] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.AltasControl);
-            _typeTable[4] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Altas);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[6] = typeof(global::System.Object);
-            _typeTable[7] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Mod);
-            _typeTable[8] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Administracion);
-            _typeTable[9] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Modificaciones);
-            _typeTable[10] = typeof(global::MyToolkit.Controls.DataGrid);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[12] = typeof(global::MyToolkit.Controls.DataGridColumnCollection);
-            _typeTable[13] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>);
-            _typeTable[14] = typeof(global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>);
-            _typeTable[15] = typeof(global::MyToolkit.Controls.DataGridColumnBase);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[17] = typeof(global::System.Boolean);
-            _typeTable[18] = typeof(global::Windows.UI.Xaml.GridLength);
-            _typeTable[19] = typeof(global::Windows.UI.Xaml.PropertyPath);
-            _typeTable[20] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[21] = typeof(global::MyToolkit.Collections.IObservableCollectionView);
-            _typeTable[22] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[23] = typeof(global::Windows.UI.Xaml.Controls.SelectionMode);
-            _typeTable[24] = typeof(global::System.Int32);
-            _typeTable[25] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[26] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[27] = typeof(global::MyToolkit.Controls.DataGridTemplatedColumn);
-            _typeTable[28] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[29] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Consultas);
-            _typeTable[30] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Bajas);
-            _typeTable[31] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.MainPage);
+            _typeTable[3] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Controles.EditarEmpleadoControl);
+            _typeTable[4] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.AltasControl);
+            _typeTable[5] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Altas);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[7] = typeof(global::System.Object);
+            _typeTable[8] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Mod);
+            _typeTable[9] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Administracion);
+            _typeTable[10] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Modificaciones);
+            _typeTable[11] = typeof(global::MyToolkit.Controls.DataGrid);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[13] = typeof(global::MyToolkit.Controls.DataGridColumnCollection);
+            _typeTable[14] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>);
+            _typeTable[15] = typeof(global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>);
+            _typeTable[16] = typeof(global::MyToolkit.Controls.DataGridColumnBase);
+            _typeTable[17] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[18] = typeof(global::System.Boolean);
+            _typeTable[19] = typeof(global::Windows.UI.Xaml.GridLength);
+            _typeTable[20] = typeof(global::Windows.UI.Xaml.PropertyPath);
+            _typeTable[21] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[22] = typeof(global::MyToolkit.Collections.IObservableCollectionView);
+            _typeTable[23] = typeof(global::Windows.UI.Xaml.Media.Brush);
+            _typeTable[24] = typeof(global::Windows.UI.Xaml.Controls.SelectionMode);
+            _typeTable[25] = typeof(global::System.Int32);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[27] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[28] = typeof(global::MyToolkit.Controls.DataGridTemplatedColumn);
+            _typeTable[29] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[30] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Consultas);
+            _typeTable[31] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.Bajas);
+            _typeTable[32] = typeof(global::Diseño_Interfaz_Proyecto_Integrador.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -259,38 +261,39 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
 
         private object Activate_0_AdministracionControl() { return new global::Diseño_Interfaz_Proyecto_Integrador.Controles.AdministracionControl(); }
         private object Activate_2_BajasControl() { return new global::Diseño_Interfaz_Proyecto_Integrador.Controles.BajasControl(); }
-        private object Activate_3_AltasControl() { return new global::Diseño_Interfaz_Proyecto_Integrador.AltasControl(); }
-        private object Activate_4_Altas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Altas(); }
-        private object Activate_7_Mod() { return new global::Diseño_Interfaz_Proyecto_Integrador.Mod(); }
-        private object Activate_8_Administracion() { return new global::Diseño_Interfaz_Proyecto_Integrador.Administracion(); }
-        private object Activate_9_Modificaciones() { return new global::Diseño_Interfaz_Proyecto_Integrador.Modificaciones(); }
-        private object Activate_10_DataGrid() { return new global::MyToolkit.Controls.DataGrid(); }
-        private object Activate_12_DataGridColumnCollection() { return new global::MyToolkit.Controls.DataGridColumnCollection(); }
-        private object Activate_13_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>(); }
-        private object Activate_14_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>(); }
-        private object Activate_27_DataGridTemplatedColumn() { return new global::MyToolkit.Controls.DataGridTemplatedColumn(); }
-        private object Activate_29_Consultas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Consultas(); }
-        private object Activate_30_Bajas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Bajas(); }
-        private object Activate_31_MainPage() { return new global::Diseño_Interfaz_Proyecto_Integrador.MainPage(); }
-        private void VectorAdd_12_DataGridColumnCollection(object instance, object item)
+        private object Activate_3_EditarEmpleadoControl() { return new global::Diseño_Interfaz_Proyecto_Integrador.Controles.EditarEmpleadoControl(); }
+        private object Activate_4_AltasControl() { return new global::Diseño_Interfaz_Proyecto_Integrador.AltasControl(); }
+        private object Activate_5_Altas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Altas(); }
+        private object Activate_8_Mod() { return new global::Diseño_Interfaz_Proyecto_Integrador.Mod(); }
+        private object Activate_9_Administracion() { return new global::Diseño_Interfaz_Proyecto_Integrador.Administracion(); }
+        private object Activate_10_Modificaciones() { return new global::Diseño_Interfaz_Proyecto_Integrador.Modificaciones(); }
+        private object Activate_11_DataGrid() { return new global::MyToolkit.Controls.DataGrid(); }
+        private object Activate_13_DataGridColumnCollection() { return new global::MyToolkit.Controls.DataGridColumnCollection(); }
+        private object Activate_14_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>(); }
+        private object Activate_15_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>(); }
+        private object Activate_28_DataGridTemplatedColumn() { return new global::MyToolkit.Controls.DataGridTemplatedColumn(); }
+        private object Activate_30_Consultas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Consultas(); }
+        private object Activate_31_Bajas() { return new global::Diseño_Interfaz_Proyecto_Integrador.Bajas(); }
+        private object Activate_32_MainPage() { return new global::Diseño_Interfaz_Proyecto_Integrador.MainPage(); }
+        private void VectorAdd_13_DataGridColumnCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_13_ObservableCollection(object instance, object item)
+        private void VectorAdd_14_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_14_Collection(object instance, object item)
+        private void VectorAdd_15_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_20_IList(object instance, object item)
+        private void VectorAdd_21_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
@@ -325,53 +328,60 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
                 xamlType = userType;
                 break;
 
-            case 3:   //  Diseño_Interfaz_Proyecto_Integrador.AltasControl
+            case 3:   //  Diseño_Interfaz_Proyecto_Integrador.Controles.EditarEmpleadoControl
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_3_AltasControl;
+                userType.Activator = Activate_3_EditarEmpleadoControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Diseño_Interfaz_Proyecto_Integrador.Altas
+            case 4:   //  Diseño_Interfaz_Proyecto_Integrador.AltasControl
+                userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_4_AltasControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Diseño_Interfaz_Proyecto_Integrador.Altas
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Altas;
+                userType.Activator = Activate_5_Altas;
                 userType.AddMemberName("JsonConvert");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Windows.UI.Xaml.Controls.Page
+            case 6:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Object
+            case 7:   //  Object
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Diseño_Interfaz_Proyecto_Integrador.Mod
+            case 8:   //  Diseño_Interfaz_Proyecto_Integrador.Mod
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_7_Mod;
+                userType.Activator = Activate_8_Mod;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Diseño_Interfaz_Proyecto_Integrador.Administracion
+            case 9:   //  Diseño_Interfaz_Proyecto_Integrador.Administracion
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Administracion;
+                userType.Activator = Activate_9_Administracion;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Diseño_Interfaz_Proyecto_Integrador.Modificaciones
+            case 10:   //  Diseño_Interfaz_Proyecto_Integrador.Modificaciones
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_Modificaciones;
+                userType.Activator = Activate_10_Modificaciones;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  MyToolkit.Controls.DataGrid
+            case 11:   //  MyToolkit.Controls.DataGrid
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_10_DataGrid;
+                userType.Activator = Activate_11_DataGrid;
                 userType.AddMemberName("Columns");
                 userType.AddMemberName("SelectedItems");
                 userType.AddMemberName("Items");
@@ -390,32 +400,32 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
                 xamlType = userType;
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.Control
+            case 12:   //  Windows.UI.Xaml.Controls.Control
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  MyToolkit.Controls.DataGridColumnCollection
+            case 13:   //  MyToolkit.Controls.DataGridColumnCollection
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>"));
-                userType.CollectionAdd = VectorAdd_12_DataGridColumnCollection;
+                userType.CollectionAdd = VectorAdd_13_DataGridColumnCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>
+            case 14:   //  System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>"));
-                userType.Activator = Activate_13_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_13_ObservableCollection;
+                userType.Activator = Activate_14_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_14_ObservableCollection;
                 xamlType = userType;
                 break;
 
-            case 14:   //  System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>
+            case 15:   //  System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_14_Collection;
-                userType.CollectionAdd = VectorAdd_14_Collection;
+                userType.Activator = Activate_15_Collection;
+                userType.CollectionAdd = VectorAdd_15_Collection;
                 xamlType = userType;
                 break;
 
-            case 15:   //  MyToolkit.Controls.DataGridColumnBase
+            case 16:   //  MyToolkit.Controls.DataGridColumnBase
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("CanSort");
                 userType.AddMemberName("IsSelected");
@@ -427,58 +437,58 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.DependencyObject
+            case 17:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Boolean
+            case 18:   //  Boolean
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Windows.UI.Xaml.GridLength
+            case 19:   //  Windows.UI.Xaml.GridLength
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Windows.UI.Xaml.PropertyPath
+            case 20:   //  Windows.UI.Xaml.PropertyPath
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  System.Collections.Generic.IList`1<Object>
+            case 21:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_20_IList;
+                userType.CollectionAdd = VectorAdd_21_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 21:   //  MyToolkit.Collections.IObservableCollectionView
+            case 22:   //  MyToolkit.Collections.IObservableCollectionView
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 22:   //  Windows.UI.Xaml.Media.Brush
+            case 23:   //  Windows.UI.Xaml.Media.Brush
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Windows.UI.Xaml.Controls.SelectionMode
+            case 24:   //  Windows.UI.Xaml.Controls.SelectionMode
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Int32
+            case 25:   //  Int32
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Windows.UI.Xaml.Style
+            case 26:   //  Windows.UI.Xaml.Style
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 26:   //  Windows.UI.Xaml.DataTemplate
+            case 27:   //  Windows.UI.Xaml.DataTemplate
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 27:   //  MyToolkit.Controls.DataGridTemplatedColumn
+            case 28:   //  MyToolkit.Controls.DataGridTemplatedColumn
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase"));
-                userType.Activator = Activate_27_DataGridTemplatedColumn;
+                userType.Activator = Activate_28_DataGridTemplatedColumn;
                 userType.AddMemberName("CellTemplate");
                 userType.AddMemberName("Order");
                 userType.AddMemberName("OrderPropertyPath");
@@ -486,27 +496,27 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integra
                 xamlType = userType;
                 break;
 
-            case 28:   //  Windows.UI.Xaml.Data.Binding
+            case 29:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 29:   //  Diseño_Interfaz_Proyecto_Integrador.Consultas
+            case 30:   //  Diseño_Interfaz_Proyecto_Integrador.Consultas
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_29_Consultas;
+                userType.Activator = Activate_30_Consultas;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Diseño_Interfaz_Proyecto_Integrador.Bajas
+            case 31:   //  Diseño_Interfaz_Proyecto_Integrador.Bajas
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_Bajas;
+                userType.Activator = Activate_31_Bajas;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  Diseño_Interfaz_Proyecto_Integrador.MainPage
+            case 32:   //  Diseño_Interfaz_Proyecto_Integrador.MainPage
                 userType = new global::Diseño_Interfaz_Proyecto_Integrador.Diseño_Interfaz_Proyecto_Integrador_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_MainPage;
+                userType.Activator = Activate_32_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

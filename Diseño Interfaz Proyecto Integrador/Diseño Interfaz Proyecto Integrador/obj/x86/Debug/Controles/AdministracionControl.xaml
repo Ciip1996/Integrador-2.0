@@ -9,40 +9,31 @@
     d:DesignWidth="400" Height="465">
 
     <Grid>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="16*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:ConnectionId='1' x:Name="cboTipo" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="0,0,0,5"/>
-        <TextBox x:ConnectionId='2' x:Name="txtNombre1" PlaceholderText="Nombre Completo" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Margin="0,1,0,5"/>
-        <TextBox x:ConnectionId='3' x:Name="txtMaterno" PlaceholderText="Apellido Materno" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="6" Margin="10,1,0,0"/>
-        <TextBox x:ConnectionId='4' x:Name="txtPaterno" PlaceholderText="Apellido Paterno" Margin="0,1,10,0" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="6"/>
-        <TextBox x:ConnectionId='5' x:Name="txtContraseña" PlaceholderText="Contraseña" Margin="0,3" Text="" Grid.ColumnSpan="2" Grid.Row="8" Grid.Column="1"/>
-        <TextBox x:ConnectionId='6' x:Name="txtConfirmar" PlaceholderText="Confirmar Contraseña" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10" Height="39" VerticalAlignment="Bottom"/>
-        <TextBox x:ConnectionId='7' x:Name="txtPregunta" PlaceholderText="Pregunta de Seguridad" Margin="0,4,0,2" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="12"/>
-        <TextBox x:ConnectionId='8' x:Name="txtRespuesta" PlaceholderText="Respuesta de Seguridad" Margin="0,1,0,5" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14"/>
-
+        <TextBox x:ConnectionId='1' x:Name="txtNombre" PlaceholderText="Nombre Completo" Margin="0,12,0,0" Grid.Column="1" Grid.Row="1" Height="32" VerticalAlignment="Top" />
+        <TextBox x:ConnectionId='2' x:Name="txtMaterno" PlaceholderText="Apellido Materno" Margin="0,12,0,0" Grid.Column="1" Grid.Row="2" Height="32" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='3' x:Name="txtPaterno" PlaceholderText="Apellido Paterno" Margin="0,15,0,0" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Height="32" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='4' x:Name="txtContraseña" PlaceholderText="Contraseña" Margin="0,9,0,0" Grid.Column="1" Grid.Row="5" Height="32" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='5' x:Name="txtConfirmar" Height="32" PlaceholderText="Confirmar Contraseña" Margin="0,15,0,0" Grid.Row="6" Grid.Column="1" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='6' x:Name="txtPregunta" PlaceholderText="Pregunta de Seguridad" Margin="0,13,0,0" Grid.Column="1" Grid.Row="7" Height="32" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='7' x:Name="txtRespuesta" PlaceholderText="Respuesta de Seguridad" Margin="0,10,0,0" Grid.Column="1" Grid.Row="8" Height="32" VerticalAlignment="Top"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,10,0,0" Grid.Row="9"/>
     </Grid>
 </UserControl>
 

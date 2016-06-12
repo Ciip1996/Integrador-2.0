@@ -20,20 +20,25 @@
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="58*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="71*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="13*"/>
+            <RowDefinition Height="595*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="73*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Altas" FontSize="42" Margin="0,0,125,0" Height="75" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <local:AltasControl  x:Name="controlAltas" Height="255" VerticalAlignment="Top"/>
-        </ScrollViewer>
-        <Button x:Name="btnSubir" Margin="0,0,10,6" HorizontalAlignment="Right" Click="btnSubir_Click" Content="Dar de Alta" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="btnSubir" Margin="0,0,134,6" HorizontalAlignment="Right" Click="btnSubir_Click" Content="Dar de Alta" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="1"/>
+        <Pivot x:Name="rootPivot" Title="Altas">
+            <PivotItem Header="Alta de Inventario" Height="Auto" VerticalAlignment="Top" Margin="80,0">
+                <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                    <local:AltasControl  x:Name="controlAltaInventario" Height="255" VerticalAlignment="Top"/>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem Header="Alta de Catalogo">
+                <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                    <TextBlock Text="Content of pivot item 2."/>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
     </Grid>
 </Page>

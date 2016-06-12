@@ -27,42 +27,48 @@
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="26*"/>
-            <ColumnDefinition Width="209*"/>
-            <ColumnDefinition Width="18*"/>
-            <ColumnDefinition Width="86*"/>
-            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="textBlock" Margin="10,0,102,0" TextWrapping="Wrap" FontSize="42" Text="Consultas" Grid.ColumnSpan="4" Height="65" VerticalAlignment="Top"/>
-        <TextBox TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar" Margin="0,12,0,0"/>
-        <ComboBox x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por" Margin="0,12,0,0"/>
-        <ToolKit:DataGrid x:Name="dgPersona" Margin="10,10,10,15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+        <TextBox x:Name="txtBuscar" TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar" Margin="0,12,0,0"/>
+        <ComboBox x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por" Margin="0,12,0,0">
+            <ComboBoxItem>Todo</ComboBoxItem>
+            <ComboBoxItem>ID Entrada</ComboBoxItem>
+            <ComboBoxItem>Codigo de Producto</ComboBoxItem>
+        </ComboBox>
+        <ToolKit:DataGrid x:Name="dgPersona" Margin="10,10,10,15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Width="Auto" HorizontalAlignment="Stretch"> 
             <ToolKit:DataGrid.Columns>
-                <ToolKit:DataGridTemplatedColumn Header="No" Width="50">
+                <ToolKit:DataGridTemplatedColumn Header="#" Width="50">
                     <ToolKit:DataGridTemplatedColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding NoEntrada}" Width="50" Foreground="Crimson" HorizontalAlignment="Left"/>
                         </DataTemplate>
                     </ToolKit:DataGridTemplatedColumn.CellTemplate>
                 </ToolKit:DataGridTemplatedColumn>
-                <ToolKit:DataGridTemplatedColumn Header="Codigo" Width="100">
+                <ToolKit:DataGridTemplatedColumn Header="Codigo" Width="150">
                     <ToolKit:DataGridTemplatedColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Codigo}" Width="100" Foreground="Crimson" HorizontalAlignment="Left"/>
+                            <TextBlock Text="{Binding Codigo}" Width="150" Foreground="Crimson" HorizontalAlignment="Left"/>
                         </DataTemplate>
                     </ToolKit:DataGridTemplatedColumn.CellTemplate>
                 </ToolKit:DataGridTemplatedColumn>
-                <ToolKit:DataGridTemplatedColumn Header="Estilo" Width="150">
+                <ToolKit:DataGridTemplatedColumn Header="Estilo" Width="200">
                     <ToolKit:DataGridTemplatedColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Estilo}" Width="150" Foreground="Crimson" HorizontalAlignment="Left"/>
+                            <TextBlock Text="{Binding Estilo}" Width="200" Foreground="Crimson" HorizontalAlignment="Left"/>
                         </DataTemplate>
                     </ToolKit:DataGridTemplatedColumn.CellTemplate>
                 </ToolKit:DataGridTemplatedColumn>
-                <ToolKit:DataGridTemplatedColumn Header="Cant" Width="50">
+                <ToolKit:DataGridTemplatedColumn Header="Cant" Width="100">
                     <ToolKit:DataGridTemplatedColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Cantidad}" Width="50" Foreground="Crimson" HorizontalAlignment="Left"/>
+                            <TextBlock Text="{Binding Cantidad}" Width="100" Foreground="Crimson" HorizontalAlignment="Left"/>
                         </DataTemplate>
                     </ToolKit:DataGridTemplatedColumn.CellTemplate>
                 </ToolKit:DataGridTemplatedColumn>
@@ -73,8 +79,36 @@
                         </DataTemplate>
                     </ToolKit:DataGridTemplatedColumn.CellTemplate>
                 </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Fecha Entrada" Width="150">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FechaEntrada}" Width="150" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Fecha Salida" Width="150">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FechaSalida}" Width="150" Foreground="Crimson" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
+                <ToolKit:DataGridTemplatedColumn Header="Imagen" Width="50">
+                    <ToolKit:DataGridTemplatedColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Width="50" Background="Crimson" Foreground="White" HorizontalAlignment="Left">
+                                <Flyout>
+                                    <Grid>
+                                        <Image Source="{Binding Imagen}"/>
+                                    </Grid>
+                                </Flyout>
+                            </Button>
+                        </DataTemplate>
+                    </ToolKit:DataGridTemplatedColumn.CellTemplate>
+                </ToolKit:DataGridTemplatedColumn>
             </ToolKit:DataGrid.Columns>
         </ToolKit:DataGrid>
+        <Button x:Name="btnConsulta" Content="Buscar" Grid.Column="5" HorizontalAlignment="Stretch" Margin="0,12,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Click="btnConsulta_Click"/>
     </Grid>
 </Page>
 <!--

@@ -2,6 +2,7 @@ App.xbf
 Controles\AdministracionControl.xbf
 Controles\AltasControl.xbf
 Controles\BajasControl.xbf
+Controles\EditarEmpleadoControl.xbf
 MainPage.xbf
 Mod.xbf
 Paginas\Administracion.xbf
