@@ -1,1 +1,1 @@
-C:\Users\Iván Pacheco\Desktop\Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador.csproj;x86
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador.csproj;x86

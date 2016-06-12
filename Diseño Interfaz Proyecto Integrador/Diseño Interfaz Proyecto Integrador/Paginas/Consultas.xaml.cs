@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Diseño_Interfaz_Proyecto_Integrador.Controles;
 using ConexionUWP;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
@@ -28,6 +29,8 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         public Consultas()
         {
             this.InitializeComponent();
+            Button btn = (Button)btnConsulta.FindName("button");
+            btn.Content = "Buscar";
         }
         public async Task consultarPorID()//Metodo 
         {
@@ -94,6 +97,12 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                     break;
             }
             
+        }
+
+        private void btnConsulta_Click(object sender, TappedRoutedEventArgs e)
+        {
+            Storyboard sb = (Storyboard)btnConsulta.Resources["stbButton"];
+            sb.Begin();
         }
     }
 }
