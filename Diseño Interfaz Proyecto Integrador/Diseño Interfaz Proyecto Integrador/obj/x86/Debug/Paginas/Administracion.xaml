@@ -14,7 +14,7 @@
             <AppBarButton x:ConnectionId='1' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
             <AppBarButton x:ConnectionId='2' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
             <AppBarButton x:ConnectionId='3' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
-            <AppBarButton x:ConnectionId='4' x:Name="btnModificaciones" Icon="Edit" Label="Modificar"                                />
+            <AppBarButton x:ConnectionId='4' x:Name="btnModificaciones" Icon="Setting" Label="Configurar"                                />
             <AppBarButton x:ConnectionId='5' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
         </CommandBar>
     </Page.BottomAppBar>
@@ -33,16 +33,16 @@
         <Pivot x:ConnectionId='6' x:Name="rootPivot" Title="Administración" Grid.ColumnSpan="3" Margin="0,-4,0,15" Grid.RowSpan="2">
             <PivotItem Header="Nuevo Empleado" Height="Auto" Margin="80,10,80,0">
                 <ScrollViewer Margin="5,12,5,0" Grid.Row="1" Grid.Column="1" HorizontalScrollBarVisibility="Hidden" HorizontalScrollMode="Disabled" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
-                    <my:AdministracionControl  Height="468" VerticalAlignment="Top"/>
+                    <my:AdministracionControl x:ConnectionId='9' x:Name="AltaEmpleado"  Height="406" VerticalAlignment="Top"/>
                 </ScrollViewer>
             </PivotItem>
             <PivotItem Header="Editar Empleados" Margin="85,0,80,5">
                 <ScrollViewer Margin="0,10,10,0" Grid.Row="1" Grid.Column="1">
-                    <my:EditarEmpleadoControl Height="421" />
+                    <my:EditarEmpleadoControl x:ConnectionId='8' x:Name="ModificacionEmpleado" Height="421" />
                 </ScrollViewer>
             </PivotItem>
         </Pivot>
-        <Button x:ConnectionId='7' x:Name="btnOk" Margin="0,21,10,9" HorizontalAlignment="Right"  Content="Generar Perfil" VerticalAlignment="Stretch" Width="150" Grid.Row="2" Grid.Column="1"/>
+        <my:BotonAnimado x:ConnectionId='7' x:Name="btnAltaAdmin"  Grid.Column="1" Margin="0,0,10,10" Grid.Row="2" Width="123" Height="42" VerticalAlignment="Bottom" Background="Black" BorderBrush="#FFD05C5C" HorizontalAlignment="Right"                             />
     </Grid>
 </Page>
 

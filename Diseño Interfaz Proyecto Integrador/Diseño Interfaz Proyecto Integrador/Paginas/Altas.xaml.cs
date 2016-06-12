@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 namespace Diseño_Interfaz_Proyecto_Integrador
@@ -27,7 +28,9 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         public Altas()
         {
             this.InitializeComponent();
-          //  funcionRunAsync();
+            //  funcionRunAsync();
+            Button btn = (Button)btnSubir.FindName("button");
+            btn.Content = "Aceptar";
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {
@@ -51,13 +54,18 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             Frame.Navigate(typeof(Administracion));
 
         }
-
-        private void btnSubir_Click(object sender, RoutedEventArgs e)
+        /*private void btnSubir_Click(object sender, RoutedEventArgs e)
         {
             TextBox txt = (TextBox)controlAltaInventario.FindName("txtCodigo");
             DSL_UWP cnn = new DSL_UWP();
             //Task c =  cnn.Get("http://localhost:51550/Api/Inventario");
             //HttpResponseMessage d = cnn.getResponse();
+        }*/
+
+        private void btnSubir_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Storyboard sb = (Storyboard)btnSubir.Resources["stbButton"];
+            sb.Begin();
         }
     }
 }

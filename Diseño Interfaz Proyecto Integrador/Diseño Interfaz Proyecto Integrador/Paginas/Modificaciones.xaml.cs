@@ -24,7 +24,6 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             array[0] = "Ivan";
             array[1] = "Cesar";
             array[2] = "Cris";
-           // listBox1.ItemsSource = array;
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {
@@ -49,11 +48,6 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         private void btnAdministracion_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Administracion));
-
-        }
-
-        private void Mod_Loaded(object sender, RoutedEventArgs e)
-        {
 
         }
     }

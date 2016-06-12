@@ -1,7 +1,9 @@
 App.xbf
 Controles\AdministracionControl.xbf
-Controles\AltasControl.xbf
+Controles\AltaCatalogoControl.xbf
+Controles\AltaInventarioControl.xbf
 Controles\BajasControl.xbf
+Controles\BotonAnimado.xbf
 Controles\EditarEmpleadoControl.xbf
 MainPage.xbf
 Mod.xbf

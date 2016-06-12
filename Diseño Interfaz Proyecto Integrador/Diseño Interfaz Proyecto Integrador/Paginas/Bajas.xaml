@@ -14,7 +14,7 @@
             <AppBarButton x:Name="btnAltas" Icon="Add" Label="Altas" Click="btnAltas_Click"/>
             <AppBarButton x:Name="btnBajas" Icon="Delete" Label="Bajas" Click="btnBajas_Click"/>
             <AppBarButton x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479" Click="btnConsultas_Click"/>
-            <AppBarButton x:Name="btnModificaciones" Icon="Edit" Label="Modificar" Click="btnModificaciones_Click"/>
+            <AppBarButton x:Name="btnModificaciones" Icon="Setting" Label="Configurar" Click="btnModificaciones_Click"/>
             <AppBarButton x:Name="btnAdministracion" Icon="People" Label="Admin" Click="btnAdministracion_Click" />
         </CommandBar>
     </Page.BottomAppBar>
@@ -25,16 +25,18 @@
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="71*"/>
             <RowDefinition Height="19*"/>
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Bajas" FontSize="42" Margin="0,0,10,0" Height="75" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Bajas" FontSize="42" Margin="0,0,5,0" Grid.ColumnSpan="2" Height="75" VerticalAlignment="Top"/>
 
-        <ScrollViewer Margin="5,5,5,10" Grid.Row="1" Grid.Column="1" HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" >
-            <my:BajasControl x:Name="ctrlBajas"  Height="255" VerticalAlignment="Top" Loaded="BajasControl_Loaded" />
+        <ScrollViewer Margin="5,5,5,10" Grid.Row="2" Grid.Column="1" HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" >
+            <my:BajasControl x:Name="ctrlBajas"  Height="340" VerticalAlignment="Top" />
         </ScrollViewer>
-        <Button x:Name="btnBajar" Margin="0,0,10,6" HorizontalAlignment="Right" Content="Dar de Baja" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="2" Grid.Column="1"/>
+        <Button />
+        <my:BotonAnimado x:Name="btnBajar" Margin="0,0,10,6" HorizontalAlignment="Right" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="3" Grid.Column="1" Tapped="btnBajar_Tapped"/>
     </Grid>
 </Page>

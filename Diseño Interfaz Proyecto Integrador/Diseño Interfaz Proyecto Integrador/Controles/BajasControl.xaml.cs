@@ -28,14 +28,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador.Controles
         {
             if (switcher.IsOn == true)
             {
-                txtCantidad.IsEnabled = false;
-                txtCodigoProducto.IsEnabled = false;
+                txtCantidad.IsEnabled = true;
+                txtCatalogo.IsEnabled = false;
                 txtIdAlmacen.IsEnabled = true;
             }
             else
             {
-                this.txtCantidad.IsEnabled = true;
-                this.txtCodigoProducto.IsEnabled = true;
+                this.txtCantidad.IsEnabled = false;
+                this.txtCatalogo.IsEnabled = true;
                 this.txtIdAlmacen.IsEnabled = false;
             }
         }

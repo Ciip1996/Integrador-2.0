@@ -10,7 +10,6 @@ namespace Diseño_Interfaz_Proyecto_Integrador
     {
         public int NoEntrada { get; set; }
         public string Codigo { get; set; }
-        public string Estilo { get; set; }
         public int Cantidad { get; set; }
         public int Categoria { get; set; }
         public DateTime FechaEntrada { get; set; }

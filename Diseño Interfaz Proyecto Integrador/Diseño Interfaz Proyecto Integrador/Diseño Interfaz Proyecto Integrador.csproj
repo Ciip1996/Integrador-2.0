@@ -95,8 +95,11 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controles\AltasControl.xaml.cs">
-      <DependentUpon>AltasControl.xaml</DependentUpon>
+    <Compile Include="Controles\AltaCatalogoControl.xaml.cs">
+      <DependentUpon>AltaCatalogoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\AltaInventarioControl.xaml.cs">
+      <DependentUpon>AltaInventarioControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\AdministracionControl.xaml.cs">
       <DependentUpon>AdministracionControl.xaml</DependentUpon>
@@ -104,9 +107,13 @@
     <Compile Include="Controles\BajasControl.xaml.cs">
       <DependentUpon>BajasControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles\BotonAnimado.xaml.cs">
+      <DependentUpon>BotonAnimado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controles\EditarEmpleadoControl.xaml.cs">
       <DependentUpon>EditarEmpleadoControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Empleado.cs" />
     <Compile Include="Inventario.cs" />
     <Compile Include="Mod.xaml.cs">
       <DependentUpon>Mod.xaml</DependentUpon>
@@ -165,7 +172,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controles\AltaCatalogoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\BajasControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\BotonAnimado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,7 +192,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controles\AltasControl.xaml">
+    <Page Include="Controles\AltaInventarioControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
