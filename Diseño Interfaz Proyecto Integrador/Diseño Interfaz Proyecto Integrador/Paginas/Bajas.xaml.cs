@@ -54,6 +54,18 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         {
             Storyboard sb = (Storyboard)btnBajar.Resources["stbButton"];
             sb.Begin();
+            ToggleSwitch switcher = (ToggleSwitch)ctrlBajas.FindName("switcher");
+            if (switcher.IsOn)
+            {
+                
+
+            }
+            else {
+
+
+
+            }
+            TextBox IdAlmacen = (TextBox)ctrlBajas.FindName("txtIdAlmacen");
         }
     }
 }

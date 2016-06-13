@@ -19,5 +19,15 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             }
             return list;
         }
+        public List<Empleado> EmpleadosCast(List<Object> lstObj)
+        {
+            List<Empleado> list = new List<Empleado>();
+            foreach (Object obj in lstObj)
+            {
+                Empleado RegistroInventario = JsonConvert.DeserializeObject<Empleado>(obj.ToString());
+                list.Add(RegistroInventario);
+            }
+            return list;
+        }
     }
 }

@@ -38,6 +38,11 @@
         <PasswordBox x:Name="txtContraseña" PlaceholderText="Contraseña" Grid.Column="1" Grid.Row="7"/>
         <TextBox x:Name="txtPregunta" PlaceholderText="Pregunta de Seguridad" Grid.Column="1" Grid.Row="9" Margin="0,1,0,0"/>
         <TextBox x:Name="txtRespuesta" PlaceholderText="Respuesta de Seguridad" Margin="0,2,0,0" Grid.Column="1" Grid.Row="11"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="13" VerticalAlignment="Stretch"/>
+        <ComboBox x:Name="cboPuesto" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="13" VerticalAlignment="Stretch">
+            <ComboBoxItem>Directivo</ComboBoxItem>
+            <ComboBoxItem>Gerencial</ComboBoxItem>
+            <ComboBoxItem>Administrativo</ComboBoxItem>
+            <ComboBoxItem>Auxiliar</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </UserControl>

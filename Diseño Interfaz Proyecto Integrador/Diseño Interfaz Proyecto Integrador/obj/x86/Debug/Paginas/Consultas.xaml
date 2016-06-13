@@ -13,11 +13,11 @@
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton x:Name="btnAltas" Icon="Add" Label="Altas" Click="btnAltas_Click"/>
-            <AppBarButton x:Name="btnBajas" Icon="Delete" Label="Bajas" Click="btnBajas_Click"/>
-            <AppBarButton x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479" Click="btnConsultas_Click"/>
-            <AppBarButton x:Name="btnModificaciones" Icon="Setting" Label="Ajustes" Click="btnModificaciones_Click"/>
-            <AppBarButton x:Name="btnAdministracion" Icon="People" Label="Admin" Click="btnAdministracion_Click" />
+            <AppBarButton x:ConnectionId='1' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
+            <AppBarButton x:ConnectionId='2' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
+            <AppBarButton x:ConnectionId='3' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
+            <AppBarButton x:ConnectionId='4' x:Name="btnModificaciones" Icon="Setting" Label="Ajustes"                                />
+            <AppBarButton x:ConnectionId='5' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
         </CommandBar>
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -36,15 +36,15 @@
             <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock" Margin="0,0,12,0" TextWrapping="Wrap" FontSize="32" Text="Consultas" Height="57" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtBuscar" TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar"/>
-        <ComboBox x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por" Margin="4,0,2,0">
+        <TextBlock x:ConnectionId='6' x:Name="textBlock" Margin="0,0,12,0" TextWrapping="Wrap" FontSize="32" Text="Consultas" Height="57" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:ConnectionId='7' x:Name="txtBuscar" TextWrapping="Wrap" Text="" Height="35" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Escriba lo que desee buscar"/>
+        <ComboBox x:ConnectionId='8' x:Name="cboBuscarPor" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Height="35" PlaceholderText="Por" Margin="4,0,2,0">
             <ComboBoxItem Content="Todo"/>
             <ComboBoxItem Content="ID Entrada"/>
             <ComboBoxItem Content="Codigo de Producto"/>
         </ComboBox>
         <ScrollViewer Grid.ColumnSpan="7" Grid.Row="2" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible">
-            <ToolKit:DataGrid x:Name="dgPersona" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Width="1007" HorizontalAlignment="Stretch">
+            <ToolKit:DataGrid x:ConnectionId='10' x:Name="dgPersona" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Width="1007" HorizontalAlignment="Stretch">
                 <ToolKit:DataGrid.Columns>
                     <ToolKit:DataGridTemplatedColumn Header="#" Width="50">
                         <ToolKit:DataGridTemplatedColumn.CellTemplate>
@@ -104,7 +104,7 @@
                 </ToolKit:DataGrid.Columns>
             </ToolKit:DataGrid>
         </ScrollViewer>
-        <Controles:BotonAnimado x:Name="btnConsulta" Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="1" Height="35" Tapped="btnConsulta_Click" VerticalAlignment="Top" Width="Auto"/>
+        <Controles:BotonAnimado x:ConnectionId='9' x:Name="btnConsulta" Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="1" Height="35"                            VerticalAlignment="Top" Width="Auto"/>
     </Grid>
 </Page>
 <!--
@@ -129,3 +129,4 @@
         </ToolKit:DataGrid>
     
     -->
+

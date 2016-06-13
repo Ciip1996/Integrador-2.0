@@ -5,32 +5,32 @@
     xmlns:local="using:Diseño_Interfaz_Proyecto_Integrador"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignWidth="400" Height="259">
+    mc:Ignorable="d" Height="246" Width="475">
 
-    <Grid>
+    <Grid Margin="0,0,0,10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="45*"/>
             <RowDefinition Height="15*"/>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="14*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="56*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtCodigo" PlaceholderText="Codigo de Producto" Text="" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <TextBox x:Name="txtEstilo" PlaceholderText="Estilo" Margin="0,1,0,4" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7"/>
-        <TextBox x:Name="txtDescripcion" PlaceholderText="Descripcion" Text="" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"/>
-        <ComboBox x:Name="cboEstado" Margin="10,3,0,2" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="5" VerticalAlignment="Stretch"/>
-        <TextBox x:Name="cboCantidad" Margin="0,3,10,2" HorizontalAlignment="Stretch" PlaceholderText="Cantidad de Pares" Grid.Column="1" Grid.Row="5"/>
-
+        <TextBox x:Name="txtCodigo" MaxWidth="500" PlaceholderText="Codigo de Producto" Text="" RenderTransformOrigin="0.5,0.5" Margin="10,7,10,0" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Height="39" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboCategoria" MaxWidth="250" PlaceholderText="Seleccione un estado" HorizontalAlignment="Stretch" Grid.Column="1" VerticalAlignment="Top" Margin="10,6,15,0" Grid.Row="2" Height="39">
+            <ComboBoxItem>Devolución sin Defecto</ComboBoxItem>
+            <ComboBoxItem>Defecto con Defecto</ComboBoxItem>
+            <ComboBoxItem>Stock</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="txtCantidad" InputScope="Number" MaxWidth="250" PlaceholderText="Cantidad de Pares" Margin="15,10,10,0" Grid.Column="2" Grid.Row="2" Height="35" VerticalAlignment="Top"/>
+        <CalendarDatePicker x:Name="fechaEntrada" MinWidth="300" MaxWidth="600" Margin="80,10,80,9" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" />
+        <TextBox x:Name="txtObservaciones"  MinWidth="300" MaxWidth="600" PlaceholderText="Observaciones" Text="" Margin="10,7,10,10" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <!--       <Button x:Name="btnMenos" Content="-" Grid.Column="4" HorizontalAlignment="Stretch" Margin="0,3,0,2" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5"/>
+        <Button x:Name="btnMas" Content="+" Grid.Column="5" HorizontalAlignment="Stretch" Margin="5,3,0,2" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5"/>-->
     </Grid>
 </UserControl>

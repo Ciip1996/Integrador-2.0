@@ -24,13 +24,35 @@ namespace Diseño_Interfaz_Proyecto_Integrador
     public sealed partial class Altas : Page
     {
         public object JsonConvert { get; private set; }
-
+        public TextBox txtCodigoCat;
+        public TextBox txtDescripcionCat;
+        public TextBox txtPrecioVenta;
+        public TextBox txtPrecioCompra;
+        public TextBox txtEstiloCat;
+        public ComboBox cboMarca;
+        public CalendarDatePicker fechaEntrada;
+        public TextBox txtCodigoInv;
+        public TextBox txtObservaciones;
+        public TextBox txtCantidadInv;
+        public ComboBox cboCategoria;
         public Altas()
         {
             this.InitializeComponent();
-            //  funcionRunAsync();
             Button btn = (Button)btnSubir.FindName("button");
             btn.Content = "Aceptar";
+            txtCodigoInv = (TextBox)controlAltaInventario.FindName("txtCodigo");
+            txtObservaciones = (TextBox)controlAltaInventario.FindName("txtObservaciones");
+            txtCantidadInv = (TextBox)controlAltaInventario.FindName("txtCantidad");
+            cboCategoria = (ComboBox)controlAltaInventario.FindName("cboCategoria");
+            fechaEntrada = (CalendarDatePicker)controlAltaInventario.FindName("fechaEntrada");
+
+            cboMarca = (ComboBox)controlAltaCatalogo.FindName("cboMarca");
+            txtCodigoCat = (TextBox)controlAltaCatalogo.FindName("txtCodigo");
+            txtEstiloCat = (TextBox)controlAltaCatalogo.FindName("txtEstilo");
+            txtDescripcionCat = (TextBox)controlAltaCatalogo.FindName("txtDescripcion");
+            txtPrecioVenta = (TextBox)controlAltaCatalogo.FindName("txtPrecioVenta");
+            txtPrecioCompra = (TextBox)controlAltaCatalogo.FindName("txtPrecioMaquila");
+
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {
@@ -54,18 +76,37 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             Frame.Navigate(typeof(Administracion));
 
         }
-        /*private void btnSubir_Click(object sender, RoutedEventArgs e)
-        {
-            TextBox txt = (TextBox)controlAltaInventario.FindName("txtCodigo");
-            DSL_UWP cnn = new DSL_UWP();
-            //Task c =  cnn.Get("http://localhost:51550/Api/Inventario");
-            //HttpResponseMessage d = cnn.getResponse();
-        }*/
-
         private void btnSubir_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Storyboard sb = (Storyboard)btnSubir.Resources["stbButton"];
             sb.Begin();
+            DSL_UWP cnn = new DSL_UWP();
+
+            if (rootPivot.SelectedIndex == 0)
+            {
+                Inventario inventario = new Inventario {
+                    Codigo = txtCodigoInv.Text,
+                    Observaciones = txtObservaciones.Text,
+                    Cantidad = int.Parse(txtCantidadInv.Text),
+                    Categoria = cboCategoria.SelectedIndex + 1,
+                    FechaEntrada = Convert.ToDateTime(fechaEntrada.Date.Value.ToString())
+                };
+                cnn.postObject("http://localhost:51550/api/Inventario", inventario);
+            }
+            else
+            {
+                Catalogo catalogo = new Catalogo
+                {
+                    Codigo = txtCodigoCat.Text,
+                    Estilo = txtEstiloCat.Text,
+                    PrecioCompra = float.Parse(txtPrecioCompra.Text),
+                    PrecioVenta = float.Parse(txtPrecioVenta.Text),
+                    Marca = cboMarca.SelectedIndex+1,
+                    Descripcion = txtDescripcionCat.Text
+                };
+                cnn.postObject("http://localhost:51550/api/Catalogo", catalogo);
+
+            }
         }
     }
 }

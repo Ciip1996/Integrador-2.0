@@ -36,7 +36,6 @@
         <ScrollViewer Margin="5,5,5,10" Grid.Row="2" Grid.Column="1" HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" >
             <my:BajasControl x:ConnectionId='7' x:Name="ctrlBajas"  Height="340" VerticalAlignment="Top" />
         </ScrollViewer>
-        <Button />
         <my:BotonAnimado x:ConnectionId='6' x:Name="btnBajar" Margin="0,0,10,6" HorizontalAlignment="Right" Height="40" VerticalAlignment="Bottom" Width="150" Grid.Row="3" Grid.Column="1"                         />
     </Grid>
 </Page>

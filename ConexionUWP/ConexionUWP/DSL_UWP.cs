@@ -24,13 +24,20 @@ namespace ConexionUWP
             this.response.EnsureSuccessStatusCode();
             content = await response.Content.ReadAsAsync<List<Object>>();
         }
-        /*public override async Task put(string url, Object obj) {
-            this.response = await httpClient.GetAsync(url);
-        }
-        public override async Task post(string url, int id)
+        public override async Task postObject(string url, Object empleadoAlta)
         {
-            this.response = await httpClient.GetAsync(url);
-        }*/
+            var httpClient = new HttpClient();
+            var response = httpClient.PostAsJsonAsync(url, empleadoAlta).Result;
+            response.EnsureSuccessStatusCode();
+            Object content = await response.Content.ReadAsAsync<Object>();
+        }
+        public override async Task putObject(string url, Object empleado) {
+            var httpClient = new HttpClient();
+            var response = httpClient.PutAsJsonAsync(url, empleado).Result;
+            //new Empleado {Nombre = "Mail",Contraseña = "caca",Pregunta = "hotmail?",Respuesta = "si",Estatus = 1,FechaIngreso = Convert.ToDateTime("1999-09-09"),FechaEgreso = Convert.ToDateTime("2000-11-10"),Puesto = 1 
+            response.EnsureSuccessStatusCode();
+            Object content = await response.Content.ReadAsAsync<Object>();
+        }
         public List<Object> getContent()
         {
             return content;

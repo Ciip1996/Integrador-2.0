@@ -1,26 +1,24 @@
-﻿using System;
+﻿using RNConexion.ISSC211.DataAbstractionLayer;
+using RNConexion.ISSC211.DataStorageLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using apiCustomer.Models;//se pone el using el nombre del proyecto y su modelos
-using RNConexion.ISSC211.DataAbstractionLayer;
-using RNConexion.ISSC211.DataStorageLayer;
+using Api_Integrador.Models;
 using System.Data;
-using Newtonsoft.Json;
 
-namespace apiCustomer.Controllers
+namespace Api_Integrador.Controllers
 {
     public class InventarioController : ApiController
     {
-        // GET: api/Customer
-        public IEnumerable<Inventario> Get()//se pone el tipo CustomerModel o la clase que se va a enviar
+        // GET: api/Inventario YA SIRVE
+        public IEnumerable<Inventario> Get()
         {
-          
-            
+
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=192.168.0.12; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source= DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
             conexion.InitialSQLStatment("SELECT * FROM dbo.ConsultaInventarioFT()", System.Data.CommandType.Text);
             DataTable table = conexion.ReturnTable();
             List<Inventario> lstInventario = new List<Inventario>();
@@ -57,10 +55,18 @@ namespace apiCustomer.Controllers
 
 
             }
+            conexion.Close();
             return lstInventario;
         }
-        public IEnumerable<Inventario> turnTableToInventario(DataTable table)
+
+        // GET: api/Inventario YA SIRVE
+        public IEnumerable<Inventario> Get(int id)
         {
+            DSL conexion = new DSL();
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
+            conexion.InitialSQLStatment("dbo.consultaPorID", System.Data.CommandType.StoredProcedure);
+            conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
+            DataTable table = conexion.ReturnTable();
             List<Inventario> listaObj = new List<Inventario>();
             Inventario objeto = new Inventario();
             foreach (DataRow Obj in table.Rows)
@@ -79,22 +85,15 @@ namespace apiCustomer.Controllers
                 catch (Exception e) { }
                 listaObj.Add(objeto);
             }
+            conexion.Close();
             return listaObj;
         }
-        // GET: api/Customer/5
-        public IEnumerable<Inventario> Get(int id)
-        {
-            DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
-            conexion.InitialSQLStatment("dbo.consultaPorID", System.Data.CommandType.StoredProcedure);
-            conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
-            DataTable table = conexion.ReturnTable();
-            return turnTableToInventario(table);
-        }
+         
+        // GET: api/Inventario/5  YA SIRVE
         public IEnumerable<Inventario> Get(string codigo)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=192.168.0.12; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source= DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
             conexion.InitialSQLStatment("SELECT * FROM dbo.ConsultaInventarioFT()", System.Data.CommandType.Text);
             DataTable table = conexion.ReturnTable();
             List<Inventario> lstInventario = new List<Inventario>();
@@ -131,42 +130,43 @@ namespace apiCustomer.Controllers
 
 
             }
+            conexion.Close();
             return lstInventario;
-            
         }
 
-        // POST: api/Customer
-        public void Post(Inventario inventario)//INSERT 
-        {
-            
-        }
-
-        // PUT: api/Customer/5
-        public void Put(int id,int cantidad,int operacion)//BAJA INVENTARIO
+        // POST: api/Inventario YA SIRVE 
+        public void Post(Inventario inventario)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=192.168.0.12; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            conexion.InitialSQLStatment("dbo.insertarInventario", System.Data.CommandType.StoredProcedure);
+            conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, inventario.Codigo);
+            conexion.SetParameterProcedure("@fechaEntrada", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Date, inventario.FechaEntrada);
+            conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, inventario.Cantidad);
+            conexion.SetParameterProcedure("@categoria", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, inventario.Categoria);
+            conexion.SetParameterProcedure("@estatus", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, inventario.Estatus);
+            conexion.SetParameterProcedure("@observaciones", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, inventario.Observaciones);
+            conexion.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        // PUT: api/Inventario/5 NO SIRVE
+        public void Put(int id, [FromBody]string value)
+        {
+            DSL conexion = new DSL();
+            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.BajaInventario", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@ID", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
-            conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, enumTipo.Entero, cantidad);
-            conexion.SetParameterProcedure("@operacion", System.Data.ParameterDirection.Input, enumTipo.Entero, operacion);
+            //conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, enumTipo.Entero, cantidad);
+            //conexion.SetParameterProcedure("@operacion", System.Data.ParameterDirection.Input, enumTipo.Entero, operacion);
             conexion.SetParameterProcedure("@mensaje", System.Data.ParameterDirection.Output, enumTipo.Cadena, "");
             conexion.ExecuteStoredOutPut();
+            conexion.Close();
         }
-        public void Put(string codigo, int cantidad, int operacion)//BAJA CATALOGO
+
+        // DELETE: api/Inventario/5
+        public void Delete(int id)
         {
-            DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=192.168.0.12; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
-            conexion.InitialSQLStatment("dbo.BajaCatalogo", System.Data.CommandType.StoredProcedure);
-            conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, enumTipo.Cadena, codigo);
-            conexion.SetParameterProcedure("@mensaje", System.Data.ParameterDirection.Output, enumTipo.Cadena, "");
-            conexion.ExecuteStoredOutPut();
-            
-        }
-        // DELETE: api/Customer/5
-        public void Delete(string id)//Bajas
-        {
-           
         }
     }
 }

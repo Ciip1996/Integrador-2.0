@@ -17,13 +17,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador
 {
     public sealed partial class Modificaciones : Page
     {
+        public bool[] swArray;
         public Modificaciones()
         {
             this.InitializeComponent();
-            string[] array = new string[3];
-            array[0] = "Ivan";
-            array[1] = "Cesar";
-            array[2] = "Cris";
+            swArray = new bool[5];
+            if (swArray[0]) swTema.IsOn = true;
+            else swTema.IsOn = false;
+            configurar();
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {
@@ -49,6 +50,24 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         {
             Frame.Navigate(typeof(Administracion));
 
+        }
+        public void configurar()
+        {
+            if (swTema.IsOn)
+            {
+                swArray[0] = true;
+                paginaModi.RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                swArray[0] = false;
+                paginaModi.RequestedTheme = ElementTheme.Light;
+
+            }
+        }
+        private void swTema_Toggled(object sender, RoutedEventArgs e)
+        {
+            configurar();
         }
     }
 }

@@ -6,31 +6,45 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignWidth="400" Height="330">
+    d:DesignWidth="400" Height="440">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="5*"/>
             <RowDefinition Height="7*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="7*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtNombre" PlaceholderText="Nombre Completo" Margin="0,5,0,0" Grid.Column="1" Height="32" VerticalAlignment="Top" Grid.Row="3" />
-        <TextBox x:Name="txtContraseña" PlaceholderText="Contraseña" Grid.Column="1" Height="32" VerticalAlignment="Top" Grid.Row="5"/>
-        <TextBox x:Name="txtConfirmar" Height="32" PlaceholderText="Confirmar Contraseña" Grid.Column="1" VerticalAlignment="Top" Grid.Row="7"/>
-        <ComboBox  x:Name="cboEmpleados" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,1,0,0" Grid.Row="1" Grid.RowSpan="2"/>
-        <ToggleSwitch x:Name="switchLaborando" Grid.Column="1" OnContent="Laborando/Activo"  OffContent="Desactivo" HorizontalAlignment="Stretch" Margin="10,0" VerticalAlignment="Top" Foreground="#FF767676" Grid.Row="9" Height="40"/>
+        <TextBox x:Name="txtNombre" PlaceholderText="Nombre Completo" Grid.Column="1" Margin="0,5,0,3" Grid.Row="2" Grid.ColumnSpan="2"  />
+        <TextBox x:Name="txtContraseña" PlaceholderText="Contraseña" Grid.Column="1" Margin="0,2,0,1" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtConfirmar" PlaceholderText="Confirmar Contraseña" Grid.Column="1" Grid.Row="6" Margin="0,5,0,3" Grid.ColumnSpan="2"/>
+        <CalendarDatePicker  x:Name="fechaIngreso"  HorizontalAlignment="Stretch" Margin="0,1,0,2" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2"/>
+        <ComboBox  PlaceholderText="Seleccione un Empleado"  x:Name="cboEmpleados" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Background="#66B9B9B9"/>
+        <ToggleSwitch x:Name="switchLaborando" Grid.Column="1" OnContent="Laborando/Activo"  OffContent="Desactivo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FF767676" Grid.Row="12" Grid.ColumnSpan="2"/>
+        <CalendarDatePicker   x:Name="fechaEgreso" PlaceholderText="Sin Fecha Egreso" HorizontalAlignment="Stretch" Margin="0,1,0,2" VerticalAlignment="Stretch" Grid.Column="1" IsEnabled="False" IsTabStop="False" Grid.Row="10" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cboPuesto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,3,0,4" Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="2" PlaceholderText="Seleccione un Puesto">
+            <ComboBoxItem>Directivo</ComboBoxItem>
+            <ComboBoxItem>Gerencial</ComboBoxItem>
+            <ComboBoxItem>Administrativo</ComboBoxItem>
+            <ComboBoxItem>Auxiliar</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </UserControl>

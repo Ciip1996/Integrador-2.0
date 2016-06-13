@@ -83,9 +83,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             Frame.Navigate(typeof(Administracion));
 
         }
-        private void btnConsulta_Click(object sender, RoutedEventArgs e)
+  
+
+        private void btnConsulta_Click(object sender, TappedRoutedEventArgs e)
         {
-            switch (cboBuscarPor.SelectedIndex) {
+            Storyboard sb = (Storyboard)btnConsulta.Resources["stbButton"];
+            sb.Begin();
+            switch (cboBuscarPor.SelectedIndex)
+            {
                 case 0:
                     Task tsk1 = consultarTodo();
                     break;
@@ -96,13 +101,7 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                     Task tsk3 = consultarPorCodigo();
                     break;
             }
-            
-        }
 
-        private void btnConsulta_Click(object sender, TappedRoutedEventArgs e)
-        {
-            Storyboard sb = (Storyboard)btnConsulta.Resources["stbButton"];
-            sb.Begin();
         }
     }
 }

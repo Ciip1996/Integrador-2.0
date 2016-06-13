@@ -38,7 +38,12 @@
         <PasswordBox x:ConnectionId='4' x:Name="txtContraseña" PlaceholderText="Contraseña" Grid.Column="1" Grid.Row="7"/>
         <TextBox x:ConnectionId='5' x:Name="txtPregunta" PlaceholderText="Pregunta de Seguridad" Grid.Column="1" Grid.Row="9" Margin="0,1,0,0"/>
         <TextBox x:ConnectionId='6' x:Name="txtRespuesta" PlaceholderText="Respuesta de Seguridad" Margin="0,2,0,0" Grid.Column="1" Grid.Row="11"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="13" VerticalAlignment="Stretch"/>
+        <ComboBox x:ConnectionId='7' x:Name="cboPuesto" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="13" VerticalAlignment="Stretch">
+            <ComboBoxItem>Directivo</ComboBoxItem>
+            <ComboBoxItem>Gerencial</ComboBoxItem>
+            <ComboBoxItem>Administrativo</ComboBoxItem>
+            <ComboBoxItem>Auxiliar</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </UserControl>
 
