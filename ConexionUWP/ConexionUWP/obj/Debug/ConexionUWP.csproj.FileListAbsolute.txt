@@ -31,3 +31,4 @@ C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\obj\Debug\
 C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\obj\Debug\qualifiers.txt
 C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\obj\Debug\ConexionUWP.csprojResolveAssemblyReference.cache

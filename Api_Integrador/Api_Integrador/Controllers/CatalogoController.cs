@@ -31,7 +31,7 @@ namespace Api_Integrador.Controllers
         public void Post(Catalogo catalogo)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.insertarCatalogo", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@Codigo", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, catalogo.Codigo);
             conexion.SetParameterProcedure("@Estilo", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, catalogo.Estilo);
@@ -45,15 +45,15 @@ namespace Api_Integrador.Controllers
         }
 
         // PUT: api/Catalogo/5
-        public void Put(int id, Catalogo c)
+        public void Put( Catalogo c)
         {
             // public void Put(string codigo, int cantidad, int operacion)//BAJA CATALOGO
 
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.BajaCatalogo", System.Data.CommandType.StoredProcedure);
-           // conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, enumTipo.Cadena, codigo);
-           // conexion.SetParameterProcedure("@mensaje", System.Data.ParameterDirection.Output, enumTipo.Cadena, "");
+            conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, enumTipo.Cadena, c.Codigo);
+            conexion.SetParameterProcedure("@mensaje", System.Data.ParameterDirection.Output, enumTipo.Cadena, "");
             conexion.ExecuteStoredOutPut();
             conexion.Close();
         }

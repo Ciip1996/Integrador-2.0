@@ -12,19 +12,31 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Diseño_Interfaz_Proyecto_Integrador.Controles;
+using BibliotecaClasesProyecto;
+using Windows.UI;
 
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
     public sealed partial class Modificaciones : Page
     {
-        public bool[] swArray;
+       
         public Modificaciones()
         {
             this.InitializeComponent();
-            swArray = new bool[5];
-            if (swArray[0]) swTema.IsOn = true;
-            else swTema.IsOn = false;
+            if (Application.tema)
+            {
+                swTema.IsOn = true;
+                
+            }
+            else
+            {
+                swTema.IsOn = false;
+            }
             configurar();
+
+        
+               
         }
         private void btnAltas_Click(object sender, RoutedEventArgs e)
         {
@@ -53,14 +65,16 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         }
         public void configurar()
         {
+          
+
             if (swTema.IsOn)
             {
-                swArray[0] = true;
+                Application.tema = true;
                 paginaModi.RequestedTheme = ElementTheme.Dark;
             }
             else
             {
-                swArray[0] = false;
+                Application.tema = false;
                 paginaModi.RequestedTheme = ElementTheme.Light;
 
             }
@@ -68,6 +82,21 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         private void swTema_Toggled(object sender, RoutedEventArgs e)
         {
             configurar();
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        private void TopAppBarAyuda(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Manual));
+        }
+
+        private void sldTransparencia_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            SolidColorBrush brush = new SolidColorBrush(Color.FromArgb((byte)sldTransparencia.Value, (byte)sldTransparencia.Value, (byte)sldTransparencia.Value, (byte)sldTransparencia.Value));
+            this.cmbar.Background = brush;
         }
     }
 }

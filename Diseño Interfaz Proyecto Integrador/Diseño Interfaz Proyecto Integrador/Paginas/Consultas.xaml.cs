@@ -18,6 +18,8 @@ using Windows.UI.Xaml.Navigation;
 using Diseño_Interfaz_Proyecto_Integrador.Controles;
 using ConexionUWP;
 using Windows.UI.Xaml.Media.Animation;
+using BibliotecaClasesProyecto;
+
 
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
@@ -31,6 +33,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             this.InitializeComponent();
             Button btn = (Button)btnConsulta.FindName("button");
             btn.Content = "Buscar";
+            if (Application.tema)
+            {
+                paginaConsultas.RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                paginaConsultas.RequestedTheme = ElementTheme.Light;
+            }
         }
         public async Task consultarPorID()//Metodo 
         {
@@ -50,6 +60,7 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             inventario = parseador.InventarioCast(cnn.getContent());
             dgPersona.ItemsSource = inventario;
             dgPersona.Items.Refresh();
+            
         }
         public async Task consultarPorCodigo()//Metodo 
         {
@@ -83,7 +94,10 @@ namespace Diseño_Interfaz_Proyecto_Integrador
             Frame.Navigate(typeof(Administracion));
 
         }
-  
+        private void TopAppBarAyuda(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Manual));
+        }
 
         private void btnConsulta_Click(object sender, TappedRoutedEventArgs e)
         {
@@ -102,6 +116,11 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                     break;
             }
 
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

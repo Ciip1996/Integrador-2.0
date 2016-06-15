@@ -30,7 +30,6 @@
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
     </UserControl.Resources>
-
     <Grid>
         <Button x:ConnectionId='2' x:Name="button" Content="Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White" BorderBrush="#FF3C3C3C" Opacity="0.9" Background="#FF676767">
             <Button.Transitions>

@@ -20,13 +20,15 @@ namespace Diseño_Interfaz_Proyecto_Integrador
     /// <summary>
     /// Proporciona un comportamiento específico de la aplicación para complementar la clase Application predeterminada.
     /// </summary>
-    sealed partial class App : Application
+    sealed partial class Application : Windows.UI.Xaml.Application
     {
         /// <summary>
         /// Inicializa el objeto de aplicación Singleton. Esta es la primera línea de código creado
         /// ejecutado y, como tal, es el equivalente lógico de main() o WinMain().
         /// </summary>
-        public App()
+        /// 
+        internal static bool tema;
+        public Application()
         {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |

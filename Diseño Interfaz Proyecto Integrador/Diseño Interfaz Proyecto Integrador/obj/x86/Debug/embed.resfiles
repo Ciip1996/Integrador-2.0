@@ -5,10 +5,12 @@ Controles\AltaInventarioControl.xbf
 Controles\BajasControl.xbf
 Controles\BotonAnimado.xbf
 Controles\EditarEmpleadoControl.xbf
+Controles\Mod.xbf
 MainPage.xbf
-Mod.xbf
 Paginas\Administracion.xbf
 Paginas\Altas.xbf
 Paginas\Bajas.xbf
 Paginas\Consultas.xbf
+Paginas\Home.xbf
+Paginas\Manual.xbf
 Paginas\Modificaciones.xbf

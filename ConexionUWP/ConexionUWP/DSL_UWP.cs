@@ -12,6 +12,8 @@ namespace ConexionUWP
         protected HttpClient httpClient = new HttpClient();
         protected HttpResponseMessage response = new HttpResponseMessage();
         protected List<Object> content;
+        public String StringOutput;
+
         public override async Task getAll(string url)
         {
             this.response = await httpClient.GetAsync(url);
@@ -23,6 +25,14 @@ namespace ConexionUWP
             this.response = await httpClient.GetAsync(url + parameter);
             this.response.EnsureSuccessStatusCode();
             content = await response.Content.ReadAsAsync<List<Object>>();
+        }
+        public override async Task validatePassword(string FullUrl)
+        {
+            this.response = await httpClient.GetAsync(FullUrl);
+            this.response.EnsureSuccessStatusCode();
+            content = await response.Content.ReadAsAsync<List<Object>>();
+            Object o = content[0];
+            StringOutput = o.ToString();
         }
         public override async Task postObject(string url, Object empleadoAlta)
         {
@@ -45,6 +55,10 @@ namespace ConexionUWP
         public HttpResponseMessage getResponse()
         {
             return this.response;
+        }
+        public String getStringOutput()
+        {
+            return StringOutput;
         }
 
     }

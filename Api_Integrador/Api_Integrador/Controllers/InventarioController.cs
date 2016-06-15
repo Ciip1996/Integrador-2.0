@@ -18,7 +18,7 @@ namespace Api_Integrador.Controllers
         {
 
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source= DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("SELECT * FROM dbo.ConsultaInventarioFT()", System.Data.CommandType.Text);
             DataTable table = conexion.ReturnTable();
             List<Inventario> lstInventario = new List<Inventario>();
@@ -26,7 +26,7 @@ namespace Api_Integrador.Controllers
             objInventario = null;
             var resultado = from tabla1 in table.AsEnumerable()
                             where (tabla1["codigo"].ToString().Contains(""))
-                            orderby tabla1["codigo"]
+                            orderby tabla1["NoEntrada"]
                             select new
                             {
                                 NoEntrada = tabla1[0].ToString(),
@@ -63,7 +63,7 @@ namespace Api_Integrador.Controllers
         public IEnumerable<Inventario> Get(int id)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.consultaPorID", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
             DataTable table = conexion.ReturnTable();
@@ -93,7 +93,7 @@ namespace Api_Integrador.Controllers
         public IEnumerable<Inventario> Get(string codigo)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source= DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("SELECT * FROM dbo.ConsultaInventarioFT()", System.Data.CommandType.Text);
             DataTable table = conexion.ReturnTable();
             List<Inventario> lstInventario = new List<Inventario>();
@@ -101,7 +101,7 @@ namespace Api_Integrador.Controllers
             objInventario = null;
             var resultado = from tabla1 in table.AsEnumerable()
                             where (tabla1["codigo"].ToString().Contains(codigo))
-                            orderby tabla1["codigo"]
+                            orderby tabla1["NoEntrada"]
                             select new
                             {
                                 NoEntrada = tabla1[0].ToString(),
@@ -138,7 +138,7 @@ namespace Api_Integrador.Controllers
         public void Post(Inventario inventario)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.insertarInventario", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@codigo", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, inventario.Codigo);
             conexion.SetParameterProcedure("@fechaEntrada", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Date, inventario.FechaEntrada);
@@ -151,14 +151,23 @@ namespace Api_Integrador.Controllers
         }
 
         // PUT: api/Inventario/5 NO SIRVE
-        public void Put(int id, [FromBody]string value)
+        public void Put( Inventario inv)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.BajaInventario", System.Data.CommandType.StoredProcedure);
-            conexion.SetParameterProcedure("@ID", System.Data.ParameterDirection.Input, enumTipo.Entero, id);
-            //conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, enumTipo.Entero, cantidad);
-            //conexion.SetParameterProcedure("@operacion", System.Data.ParameterDirection.Input, enumTipo.Entero, operacion);
+            conexion.SetParameterProcedure("@ID", System.Data.ParameterDirection.Input, enumTipo.Entero, inv.NoEntrada);
+            try
+            {
+                conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, enumTipo.Entero, inv.Cantidad);
+                conexion.SetParameterProcedure("@operacion", System.Data.ParameterDirection.Input, enumTipo.Entero, 2);
+            }
+            catch (Exception ex)
+            {
+                conexion.SetParameterProcedure("@cantidad", System.Data.ParameterDirection.Input, enumTipo.Entero, inv.Cantidad);
+                conexion.SetParameterProcedure("@operacion", System.Data.ParameterDirection.Input, enumTipo.Entero, 1);
+                
+            }
             conexion.SetParameterProcedure("@mensaje", System.Data.ParameterDirection.Output, enumTipo.Cadena, "");
             conexion.ExecuteStoredOutPut();
             conexion.Close();

@@ -15,9 +15,10 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-
-
+using ConexionUWP;
+using System.Threading.Tasks;
 
 // La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 namespace Diseño_Interfaz_Proyecto_Integrador
@@ -27,30 +28,57 @@ namespace Diseño_Interfaz_Proyecto_Integrador
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Button btn;
+        public Storyboard sb;
         public MainPage()
         {
             this.InitializeComponent();
+            btn = (Button)btnIniciar.FindName("button");
+            btn.Content = "Iniciar Sesión";
         }
-       
-        private void btnAltas_Click(object sender, RoutedEventArgs e)
+        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Altas));
+            //Storyboard sb = (Storyboard)btnIniciar.Resources["stbButton"];
+            //sb.Begin();
+           string usuario = txtUsuario.Text;
+            string contraseña = password.Password;
+            DSL_UWP conexion = new DSL_UWP();
+            string sUser = "usuario=" + usuario;
+            string sPassword = "&contraseña=" + contraseña;
+            string url = "http://localhost:51550/api/Empleado?" + sUser + sPassword;
+            Task variable = evaluarContraseña(url);
         }
-        private void btnBajas_Click(object sender, RoutedEventArgs e)
+
+        private void btnAyuda_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Bajas));
+            this.Frame.Navigate(typeof(Manual));
         }
-        private void btnConsultas_Click(object sender, RoutedEventArgs e)
+
+        public async Task evaluarContraseña(string url)
         {
-            Frame.Navigate(typeof(Consultas));
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage response = new HttpResponseMessage();
+            List<Object> content;
+            String StringOutput;
+            response = await httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            content = await response.Content.ReadAsAsync<List<Object>>();
+            Object o = content[0];
+            StringOutput = o.ToString();
+            if (StringOutput == "1"){
+                Frame.Navigate(typeof(Home));
+            }
+            else
+            {
+
+            }
         }
-        private void btnModificaciones_Click(object sender, RoutedEventArgs e)
+
+        private void btnSeguir_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Modificaciones));
+            Frame.Navigate(typeof(Home));
         }
-        private void btnAdministracion_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Administracion));
-        }
+
+    
     }
 }

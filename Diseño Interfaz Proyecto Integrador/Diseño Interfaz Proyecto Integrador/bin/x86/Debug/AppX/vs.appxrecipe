@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d9256ad9-27d9-42f5-b873-b3e9c3835acc</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>D5F982C500BA7CF24F3543BF06EECA49CA148FDDAF35E9C65BBD44B91DC802B6</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>FD304A9F42762DCAC3EE824159728CD9219158D7DBE63EBEC466AD74C1FB7DD2</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d9256ad9-27d9-42f5-b873-b3e9c3835acc_1.0.0.0_x86__s3kyeamnzgw28</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d9256ad9-27d9-42f5-b873-b3e9c3835acc_s3kyeamnzgw28!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d9256ad9-27d9-42f5-b873-b3e9c3835acc</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-13T09:39:12.472</Modified>
+      <Modified>2016-06-15T08:26:44.652</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>entrypoint\Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-13T09:39:10.729</Modified>
+      <Modified>2016-06-15T08:26:43.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -125,6 +125,10 @@
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\Newtonsoft.Json\8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2016-03-15T03:30:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\runtime.any.System.Private.DataContractSerialization\4.1.0\lib\netcore50\System.Private.DataContractSerialization.dll">
+      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
+      <Modified>2016-02-22T03:35:48.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.AppContext\4.0.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -290,10 +294,6 @@
       <PackagePath>System.ObjectModel.dll</PackagePath>
       <Modified>2016-02-17T02:22:30.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Private.DataContractSerialization\4.0.0\lib\netcore50\System.Private.DataContractSerialization.dll">
-      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2016-02-17T02:22:26.419</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Private.Networking\4.0.0\lib\netcore50\System.Private.Networking.dll">
       <PackagePath>System.Private.Networking.dll</PackagePath>
       <Modified>2016-02-17T02:22:26.294</Modified>
@@ -374,17 +374,17 @@
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
       <Modified>2016-02-17T02:22:30.591</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Json\4.0.0\lib\netcore50\System.Runtime.Serialization.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Json\4.0.1\lib\netcore50\System.Runtime.Serialization.Json.dll">
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2016-02-17T02:22:26.247</Modified>
+      <Modified>2016-02-22T03:36:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Primitives\4.0.10\lib\dotnet\System.Runtime.Serialization.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.0\lib\netcore50\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2016-02-17T02:22:26.122</Modified>
+      <Modified>2016-02-22T03:36:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Xml\4.0.10\lib\netcore50\System.Runtime.Serialization.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.Serialization.Xml\4.1.0\lib\netcore50\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2016-02-17T02:22:26.279</Modified>
+      <Modified>2016-02-22T03:36:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\.nuget\packages\System.Runtime.WindowsRuntime\4.0.10\lib\netcore50\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
@@ -478,18 +478,30 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-02-17T02:22:27.825</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\bin\Debug\BibliotecaClasesProyecto.dll">
+      <PackagePath>BibliotecaClasesProyecto.dll</PackagePath>
+      <Modified>2016-06-15T06:01:41.514</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\ConexionUWP\ConexionUWP\bin\Debug\ConexionUWP.dll">
       <PackagePath>ConexionUWP.dll</PackagePath>
-      <Modified>2016-06-13T02:14:29.042</Modified>
+      <Modified>2016-06-15T05:34:50.442</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-05-27T22:10:27.939</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Manual\FICE.png">
+      <PackagePath>Manual\FICE.png</PackagePath>
+      <Modified>2016-06-15T07:11:07.596</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-13T05:44:32.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Galeria\usuario.png">
+      <PackagePath>Galeria\usuario.png</PackagePath>
+      <Modified>2016-06-15T05:11:49.041</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -520,6 +532,14 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-13T05:41:52.108</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Manual\MPK1000_Chocolate.jpg">
+      <PackagePath>Manual\MPK1000_Chocolate.jpg</PackagePath>
+      <Modified>2016-06-15T06:25:46.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Manual\MPK1001_Beige_Café.jpg">
+      <PackagePath>Manual\MPK1001_Beige_Café.jpg</PackagePath>
+      <Modified>2016-06-15T06:35:33.821</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\Galeria\MPK1000_Chocolate.jpg">
       <PackagePath>Galeria\MPK1000_Chocolate.jpg</PackagePath>
       <Modified>2016-06-11T08:11:41.440</Modified>
@@ -546,7 +566,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Diseño Interfaz Proyecto Integrador.xr.xml">
       <PackagePath>Diseño Interfaz Proyecto Integrador.xr.xml</PackagePath>
-      <Modified>2016-06-13T08:40:45.048</Modified>
+      <Modified>2016-06-15T08:22:58.682</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -558,11 +578,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-13T09:39:12.028</Modified>
+      <Modified>2016-06-15T08:26:44.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Iván Pacheco\Desktop\Integrador-2.0\Diseño Interfaz Proyecto Integrador\Diseño Interfaz Proyecto Integrador\bin\x86\Debug\Core\Diseño Interfaz Proyecto Integrador.exe">
       <PackagePath>Diseño Interfaz Proyecto Integrador.exe</PackagePath>
-      <Modified>2016-06-13T09:39:12.463</Modified>
+      <Modified>2016-06-15T08:26:44.643</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

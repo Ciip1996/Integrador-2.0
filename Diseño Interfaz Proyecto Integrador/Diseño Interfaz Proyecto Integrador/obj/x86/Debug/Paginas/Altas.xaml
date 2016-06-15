@@ -1,21 +1,22 @@
-﻿<Page xmlns:my="using:Diseño_Interfaz_Proyecto_Integrador.Controles" 
+﻿<Page x:ConnectionId='1' x:Name="paginaAltas"
+    xmlns:my="using:Diseño_Interfaz_Proyecto_Integrador.Controles" 
     x:Class="Diseño_Interfaz_Proyecto_Integrador.Altas"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Diseño_Interfaz_Proyecto_Integrador"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Background="#00000000">
     <Page.BottomAppBar>
         <CommandBar>
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton x:ConnectionId='1' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
-            <AppBarButton x:ConnectionId='2' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
-            <AppBarButton x:ConnectionId='3' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
-            <AppBarButton x:ConnectionId='4' x:Name="btnModificaciones" Icon="Setting" Label="Configurar"                                />
-            <AppBarButton x:ConnectionId='5' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
+            <AppBarButton x:ConnectionId='2' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
+            <AppBarButton x:ConnectionId='3' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
+            <AppBarButton x:ConnectionId='4' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
+            <AppBarButton x:ConnectionId='5' x:Name="btnModificaciones" Icon="Setting" Label="Configurar"                                />
+            <AppBarButton x:ConnectionId='6' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
         </CommandBar>
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -29,19 +30,35 @@
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
 
-        <Pivot x:ConnectionId='6' x:Name="rootPivot" Title="Altas" Margin="3,-4,-3,11.4" Grid.ColumnSpan="2">
-            <PivotItem Header="Alta de Inventario" Margin="10,10,10,23.667">
-                <ScrollViewer Margin="5,25,5,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
-                    <local:AltasControl x:ConnectionId='9'  x:Name="controlAltaInventario" Width="auto" Height="264"/>
+        <Pivot x:ConnectionId='7' x:Name="rootPivot" Title="Altas" Margin="3,-4,-3,11.4" Grid.ColumnSpan="2">
+            <PivotItem Header="Alta de Inventario" Margin="10,10,10,3.667">
+                <ScrollViewer Margin="0,25,0,10" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                    <local:AltasControl x:ConnectionId='14'  x:Name="controlAltaInventario" Width="auto" Height="264"/>
                 </ScrollViewer>
             </PivotItem>
             <PivotItem Header="Alta de Catalogo" Margin="60,10,60,18.667">
                 <ScrollViewer Margin="5,2,5,40" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
-                    <my:AltaCatalogoControl x:ConnectionId='8'  x:Name="controlAltaCatalogo" Height="314" VerticalAlignment="Top"/>
+                    <my:AltaCatalogoControl x:ConnectionId='13'  x:Name="controlAltaCatalogo" Height="314" VerticalAlignment="Top"/>
                 </ScrollViewer>
             </PivotItem>
         </Pivot>
-        <my:BotonAnimado x:ConnectionId='7' x:Name="btnSubir" Margin="0,0,15,10"  Height="40" Width="150"                          VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Right"/>
+        <CommandBar  Grid.ColumnSpan="5" Height="55" Background="#00E6E6E6" FontWeight="Bold" ClosedDisplayMode="Minimal" >
+            <AppBarButton x:ConnectionId='11' Width="50" Icon="OtherUser" Label="Salir" Foreground="#FF969696"                            Margin="0,0,0,6" VerticalAlignment="Stretch" BorderBrush="#00FCFCFC"/>
+            <AppBarButton x:ConnectionId='12' Width="50" Icon="Help" Label="Ayuda" Foreground="#FF969696"                          Margin="0,0,0,6" VerticalAlignment="Stretch" BorderBrush="#00FCFCFC"/>
+        </CommandBar>
+        <my:BotonAnimado x:ConnectionId='8' x:Name="btnSubir" Margin="0,0,15,10"  Height="40" Width="150"                          VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Right">
+            
+        </my:BotonAnimado>
+        <ContentDialog x:ConnectionId='9' x:Name="MensajeAlta"
+                       Title="Alta Correcta"
+                        VerticalAlignment="Center"
+                        Width="{Binding ActualWidth, ElementName=pageRoot}" Foreground="White" Background="Crimson" Margin="0,81,0,100" Grid.Row="1" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Height="204">
+            <StackPanel>
+                <TextBlock Text="Se ha dado de alta correctamente."
+                            TextWrapping="Wrap" Foreground="White" Margin="0,10,0,0"/>
+                <Button x:ConnectionId='10' Height="36" Content="OK" Foreground="Crimson" Background="White" HorizontalAlignment="Stretch" Margin="120,20,0,0"                       />
+            </StackPanel>
+        </ContentDialog>
     </Grid>
 </Page>
 

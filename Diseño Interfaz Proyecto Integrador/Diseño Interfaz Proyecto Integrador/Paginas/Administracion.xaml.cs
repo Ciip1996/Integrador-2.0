@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using BibliotecaClasesProyecto;
+
 
 namespace Diseño_Interfaz_Proyecto_Integrador
 {
@@ -41,6 +43,14 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         public Administracion()
         {
             this.InitializeComponent();
+            if (Application.tema)
+            {
+                paginaAdmin.RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                paginaAdmin.RequestedTheme = ElementTheme.Light;
+            }
             cargarControles();
             Task v = cargarEmpleados();
         }
@@ -197,9 +207,25 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                     var response2 = cnn2.getResponse();
                     break;
             }
+            MostrarMensaje();
         }
-        
 
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        private void TopAppBarAyuda(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Manual));
+        }
+        private async void MostrarMensaje()
+        {
+            var result = await MensajeAlta.ShowAsync();
+        }
+        private void ocultarMensaje(object sender, RoutedEventArgs e)
+        {
+            MensajeAlta.Hide();
+        }
     }
 }
 

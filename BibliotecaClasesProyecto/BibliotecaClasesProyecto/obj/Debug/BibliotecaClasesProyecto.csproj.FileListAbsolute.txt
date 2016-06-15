@@ -1,0 +1,17 @@
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\bin\Debug\BibliotecaClasesProyecto.dll
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\bin\Debug\BibliotecaClasesProyecto.pdb
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\bin\Debug\BibliotecaClasesProyecto.pri
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\BibliotecaClasesProyecto.dll
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\BibliotecaClasesProyecto.pdb
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\priconfig.xml
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\priconfig.xml.intermediate
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\layout.resfiles
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\layout.resfiles.intermediate
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\resources.resfiles
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\resources.resfiles.intermediate
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\pri.resfiles
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\pri.resfiles.intermediate
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\qualifiers.txt
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Iván Pacheco\Desktop\Integrador-2.0\BibliotecaClasesProyecto\BibliotecaClasesProyecto\obj\Debug\BibliotecaClasesProyecto.csprojResolveAssemblyReference.cache

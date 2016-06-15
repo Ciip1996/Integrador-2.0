@@ -10,7 +10,6 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Xml;
 using System.Xml.Linq;
-
 namespace Api_Integrador.Controllers
 {
     public class EmpleadoController : ApiController
@@ -20,7 +19,7 @@ namespace Api_Integrador.Controllers
         {
             List<String> listaEmpleado = new List<String>();
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             //bool cn = conexion.Open("Data Source=#IPAQUI#\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.traerListaEmpleados", System.Data.CommandType.StoredProcedure);
             //conexion.SetParameterProcedure("@Nombre", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, "Ivan");
@@ -39,7 +38,7 @@ namespace Api_Integrador.Controllers
         public IEnumerable<Empleado> Get(int pId)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.traerEmpleado", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, pId);
             conexion.SetParameterProcedure("@Resultado", System.Data.ParameterDirection.ReturnValue, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.XML, "");
@@ -63,11 +62,29 @@ namespace Api_Integrador.Controllers
             conexion.Close();
             return ListaEmpleado;
         }
-        // POST: api/Empleado
+        // YA
+        public IEnumerable<Object> Get(string usuario, string contraseña)
+        {
+            DSL conexion = new DSL();
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
+            conexion.InitialSQLStatment("dbo.validarContraseña", System.Data.CommandType.StoredProcedure);
+            conexion.SetParameterProcedure("@usuario", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, usuario);
+            conexion.SetParameterProcedure("@contraseña", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, contraseña);
+            conexion.SetParameterProcedure("@respuesta", System.Data.ParameterDirection.Output, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, 0);
+            conexion.ExecuteNonQuery();
+            Object obj = conexion.ReturnObject();
+            String x = Convert.ToString(obj);
+            List<Object> c = new List<Object>();
+            c.Add(obj);
+            conexion.Close();
+            return c;
+            
+        }
+        // POST: api/Empleado YA
         public void Post(Empleado empleado)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.insertarEmpleado", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@Nombre", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, empleado.Nombre);
             conexion.SetParameterProcedure("@Puesto", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, empleado.Puesto);
@@ -77,11 +94,11 @@ namespace Api_Integrador.Controllers
             conexion.ExecuteNonQuery();
             conexion.Close();
         }
-        // PUT: api/Empleado/5
+        // PUT: api/Empleado/5 YA 
         public void Put(Empleado empleado)
         {
             DSL conexion = new DSL();
-            bool cn = conexion.Open("Data Source=DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id=sa; Password = 123", enumProveedor.SQLServer);
+            bool cn = conexion.Open("Data Source = DESKTOP-8KVESM0\\SQLEXPRESS; Initial Catalog=IntegradorBD; User Id = sa ; Password = 123; ", RNConexion.ISSC211.DataAbstractionLayer.enumProveedor.SQLServer);
             conexion.InitialSQLStatment("dbo.modificarEmpleado", System.Data.CommandType.StoredProcedure);
             conexion.SetParameterProcedure("@id", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Entero, empleado.IdEmpleado);
             conexion.SetParameterProcedure("@Nombre", System.Data.ParameterDirection.Input, RNConexion.ISSC211.DataAbstractionLayer.enumTipo.Cadena, empleado.Nombre);

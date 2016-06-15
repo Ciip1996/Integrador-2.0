@@ -7,16 +7,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" RequestedTheme="Light">
+
+
     <Page.BottomAppBar>
-        <CommandBar>
+        <CommandBar x:ConnectionId='2' x:Name="cmbar">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton x:ConnectionId='2' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
-            <AppBarButton x:ConnectionId='3' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
-            <AppBarButton x:ConnectionId='4' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
-            <AppBarButton x:ConnectionId='5' x:Name="btnModificaciones" Icon="Setting" Label="Ajustes"                                />
-            <AppBarButton x:ConnectionId='6' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
+            <AppBarButton x:ConnectionId='3' x:Name="btnAltas" Icon="Add" Label="Altas"                       />
+            <AppBarButton x:ConnectionId='4' x:Name="btnBajas" Icon="Delete" Label="Bajas"                       />
+            <AppBarButton x:ConnectionId='5' x:Name="btnConsultas" Icon="Find" Label="Consultar" RenderTransformOrigin="0.574,0.479"                           />
+            <AppBarButton x:ConnectionId='6' x:Name="btnModificaciones" Icon="Setting" Label="Ajustes"                                />
+            <AppBarButton x:ConnectionId='7' x:Name="btnAdministracion" Icon="People" Label="Admin"                                 />
         </CommandBar>
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -30,10 +32,21 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="10,15,10,0" Grid.Column="1" Grid.Row="1">
-            <ToggleSwitch x:ConnectionId='7' x:Name="swTema" Header="Modo Noche" Margin="10"                         ></ToggleSwitch>
-        </StackPanel>
-        <!--
+        <Pivot x:ConnectionId='8' x:Name="rootPivot" Title="Configuración" Grid.ColumnSpan="3" Margin="0,-4,0,24" Grid.RowSpan="2">
+            <PivotItem Header="Diseño e Interfaz" Margin="10,0">
+                <StackPanel Margin="1,15,10,0" Grid.Column="1" Grid.Row="1">
+                    <ToggleSwitch x:ConnectionId='11' x:Name="swTema" Header="Modo Noche" Margin="20"                          HorizontalAlignment="Stretch"/>
+                    <Slider x:ConnectionId='12' x:Name="sldTransparencia" Header="Transparencia de Barra"  Margin="20" HorizontalAlignment="Stretch"                                             ></Slider>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+        <CommandBar  Grid.ColumnSpan="5" Height="55" Background="#00E6E6E6" FontWeight="Bold" ClosedDisplayMode="Minimal" >
+            <AppBarButton x:ConnectionId='9' Width="50" Icon="OtherUser" Label="Salir" Foreground="#FF969696"                            Margin="0,0,0,6" VerticalAlignment="Stretch" BorderBrush="#00FCFCFC"/>
+            <AppBarButton x:ConnectionId='10' Width="50" Icon="Help" Label="Ayuda" Foreground="#FF969696"                          Margin="0,0,0,6" VerticalAlignment="Stretch" BorderBrush="#00FCFCFC"/>
+        </CommandBar>
+    </Grid>
+</Page>
+<!--
         
         <TextBlock x:Name="textBlock" Margin="10,0,22,0" TextWrapping="Wrap" FontSize="42" Text="Modificaciones" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="70" VerticalAlignment="Top"/>
         <TextBox x:Name="txtMod" Margin="10,20,9,0" TextWrapping="Wrap" PlaceholderText="Codigo de producto" Grid.Column="1" Grid.Row="2" Height="36" VerticalAlignment="Top"/>
@@ -42,6 +55,4 @@
 
         </Grid>
         -->
-    </Grid>
-</Page>
 

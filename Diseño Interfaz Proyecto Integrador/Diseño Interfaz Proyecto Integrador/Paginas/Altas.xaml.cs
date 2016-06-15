@@ -1,4 +1,5 @@
-﻿using ConexionUWP;
+﻿using BibliotecaClasesProyecto;
+using ConexionUWP;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,7 +39,15 @@ namespace Diseño_Interfaz_Proyecto_Integrador
         public Altas()
         {
             this.InitializeComponent();
-            Button btn = (Button)btnSubir.FindName("button");
+            if (Application.tema)
+            {
+                paginaAltas.RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                paginaAltas.RequestedTheme = ElementTheme.Light;
+            }
+                Button btn = (Button)btnSubir.FindName("button");
             btn.Content = "Aceptar";
             txtCodigoInv = (TextBox)controlAltaInventario.FindName("txtCodigo");
             txtObservaciones = (TextBox)controlAltaInventario.FindName("txtObservaciones");
@@ -92,6 +101,7 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                     FechaEntrada = Convert.ToDateTime(fechaEntrada.Date.Value.ToString())
                 };
                 cnn.postObject("http://localhost:51550/api/Inventario", inventario);
+                cnn.getResponse();
             }
             else
             {
@@ -107,6 +117,23 @@ namespace Diseño_Interfaz_Proyecto_Integrador
                 cnn.postObject("http://localhost:51550/api/Catalogo", catalogo);
 
             }
+            MostrarMensaje();
+        }
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        private void TopAppBarAyuda(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Manual));
+        }
+        private async void MostrarMensaje()
+        {
+            var result = await MensajeAlta.ShowAsync();
+        }
+        private void ocultarMensaje(object sender, RoutedEventArgs e)
+        {
+            MensajeAlta.Hide();
         }
     }
 }

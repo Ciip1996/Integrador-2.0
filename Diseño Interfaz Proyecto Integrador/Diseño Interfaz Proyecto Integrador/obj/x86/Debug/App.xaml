@@ -1,6 +1,6 @@
 ﻿<Application
     x:Name="APPuwp"
-    x:Class="Diseño_Interfaz_Proyecto_Integrador.App"
+    x:Class="Diseño_Interfaz_Proyecto_Integrador.Application"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Diseño_Interfaz_Proyecto_Integrador"

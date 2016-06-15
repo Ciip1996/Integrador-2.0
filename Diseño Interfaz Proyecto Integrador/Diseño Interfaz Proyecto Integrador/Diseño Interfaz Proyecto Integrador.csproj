@@ -92,10 +92,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Manual\FICE.png" />
+    <Content Include="Manual\MPK1000_Chocolate.jpg" />
+    <Content Include="Manual\MPK1001_Beige_Café.jpg" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalogo.cs" />
     <Compile Include="Controles\AltaCatalogoControl.xaml.cs">
       <DependentUpon>AltaCatalogoControl.xaml</DependentUpon>
     </Compile>
@@ -114,9 +116,7 @@
     <Compile Include="Controles\EditarEmpleadoControl.xaml.cs">
       <DependentUpon>EditarEmpleadoControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Inventario.cs" />
-    <Compile Include="Mod.xaml.cs">
+    <Compile Include="Controles\Mod.xaml.cs">
       <DependentUpon>Mod.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Administracion.xaml.cs">
@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="Paginas\Altas.xaml.cs">
       <DependentUpon>Altas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Manual.xaml.cs">
+      <DependentUpon>Manual.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Modificaciones.xaml.cs">
       <DependentUpon>Modificaciones.xaml</DependentUpon>
@@ -140,7 +146,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Parseador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +161,7 @@
     <Content Include="Galeria\MPK1000_Tabaco_Miel.jpg" />
     <Content Include="Galeria\MPK1001_Beige_Café.jpg" />
     <Content Include="Galeria\MPK1002_Marino.jpg" />
+    <Content Include="Galeria\usuario.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -197,13 +203,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Mod.xaml">
+    <Page Include="Controles\Mod.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paginas\Administracion.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Paginas\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\Manual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paginas\Modificaciones.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -223,6 +237,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BibliotecaClasesProyecto">
+      <HintPath>..\..\BibliotecaClasesProyecto\BibliotecaClasesProyecto\bin\Debug\BibliotecaClasesProyecto.dll</HintPath>
+    </Reference>
     <Reference Include="ConexionUWP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ConexionUWP\ConexionUWP\bin\Debug\ConexionUWP.dll</HintPath>
